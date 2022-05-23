@@ -1,11 +1,8 @@
-# Template for projects
+# Valentino Guerra
+## Personal website
 
-## Using
+## Made using
 - React
 - Webpack
 - Typescript
 - TailwindCSS
-
-## Help
-
-https://github.com/typescript-cheatsheets/react#reacttypescript-cheatsheets
