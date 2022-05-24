@@ -9,7 +9,7 @@ export const Card = ({ children }: Props): JSX.Element => {
       flex
       w-full
       flex-col
-      gap-4
+      gap-8
       rounded-xl
       border
       bg-light-6/160
