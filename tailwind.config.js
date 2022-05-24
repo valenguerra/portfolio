@@ -6,12 +6,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#042d47",
-        accent: "#3dd1b8",
+        "light-6/160": "#ffffff06",
+        "light-12/160": "#ffffff12",
       },
     },
     fontFamily: {
-      main: ["Montserrat", "sans-serif"],
+      main: ["Jost", "sans-serif"],
     },
   },
   plugins: [],
