@@ -2,7 +2,7 @@ export const SuperTitle = (): JSX.Element => {
   return (
     <div className="flex w-full items-center gap-6">
       <img
-        src="../../assets/images/curve.png"
+        src="/assets/images/curve.png"
         alt="curve"
         className="hidden h-20 md:inline-block md:h-28"
       />

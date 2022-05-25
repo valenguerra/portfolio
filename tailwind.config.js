@@ -1,4 +1,3 @@
-const colors = require("tailwindcss/colors");
 
 module.exports = {
   content: ["./src/**/*.html", "./src/**/*.ts", "./src/**/*.tsx"],
