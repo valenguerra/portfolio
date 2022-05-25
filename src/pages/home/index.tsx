@@ -13,7 +13,7 @@ export const Home = (): JSX.Element => {
       <Background />
       <main className="jusitfy-center mx-auto flex h-screen w-full max-w-screen-md flex-col items-center gap-12 md:gap-24 px-4 py-6">
         <Link>Cambiar a español</Link>
-        <div className="flex flex-col gap-32">
+        <div className="flex flex-col gap-16 md:gap-32">
           <SuperTitle />
           <Card>
             <div className="flex items-center justify-between">

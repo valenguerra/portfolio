@@ -22,7 +22,7 @@ export const ColoredIcon = ({
 
   return (
     <img
-      src={`../assets/images/${name}.png`}
+      src={`/assets/images/${name}.png`}
       className={isSmall ? "h-4" : "h-8"}
     />
   );
