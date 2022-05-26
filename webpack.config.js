@@ -1,6 +1,5 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.tsx",
@@ -32,14 +31,17 @@ module.exports = {
       },
       {
         test: /\.(png|j?g|svg|gif)?$/,
-        use: "file-loader",
-      },
+        loader: "file-loader",
+        options: {
+          outputPath: "assets",
+        }, 
+      }, 
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({ template: "./public/index.html" }),
-    new CopyWebpackPlugin({
+    /*     new CopyWebpackPlugin({
       patterns: [{ from: "src/assets", to: "assets" }],
-    }),
+    }), */
   ],
 };

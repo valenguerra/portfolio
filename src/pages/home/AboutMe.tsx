@@ -7,7 +7,7 @@ import { Paragraph } from "../../components/Text";
 import { TitleIcon } from "../../components/TitleIcon";
 
 import profile from "../../assets/images/profile.png";
-import dinosaur from "../../assets/images/disnosaur.png";
+import dinosaur from "../../assets/images/dinosaur.png";
 import reading from "../../assets/images/reading.png";
 import checkCalendar from "../../assets/images/check_calendar.png";
 import notebook from "../../assets/images/notebook.png";
