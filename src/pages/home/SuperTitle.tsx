@@ -1,8 +1,11 @@
+import curve from "../../assets/images/curve.png";
+import profile from "../../assets/images/profile.png";
+
 export const SuperTitle = (): JSX.Element => {
   return (
     <div className="flex w-full flex-col-reverse items-center  gap-6 md:flex-row">
       <img
-        src="/assets/images/curve.png"
+        src={curve}
         alt="curve"
         className="hidden h-20 md:inline-block md:h-28"
       />
@@ -15,7 +18,7 @@ export const SuperTitle = (): JSX.Element => {
         </h2>
       </div>
       <img
-        src="/assets/images/profile.png"
+        src={profile}
         alt="Valentino Guerra"
         className="h-24 rounded-full md:h-32"
       />

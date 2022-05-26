@@ -1,10 +1,10 @@
-import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
+import { FiChevronRight, FiChevronLeft, FiChevronDown } from "react-icons/fi";
 import { AiOutlineGithub, AiOutlineInstagram } from "react-icons/ai";
 import { ImFileEmpty } from "react-icons/im";
 import { IoLogoLinkedin } from "react-icons/io";
 
 interface ColoredIconProps {
-  name: string;
+  src: string;
   size?: "small" | "big";
 }
 
@@ -15,17 +15,11 @@ interface IconProps {
 }
 
 export const ColoredIcon = ({
-  name,
+  src,
   size = "small",
 }: ColoredIconProps): JSX.Element => {
   const isSmall = size === "small";
-
-  return (
-    <img
-      src={`/assets/images/${name}.png`}
-      className={isSmall ? "h-4" : "h-8"}
-    />
-  );
+  return <img src={src} className={isSmall ? "h-6" : "h-8"} />;
 };
 
 export const Icon = ({
@@ -41,6 +35,7 @@ export const Icon = ({
 
   if (name === "arrowRight") return <FiChevronRight {...props} />;
   if (name === "arrowLeft") return <FiChevronLeft {...props} />;
+  if (name === "arrowDown") return <FiChevronDown {...props} />;
   if (name === "github") return <AiOutlineGithub {...props} />;
   if (name === "linkedIn") return <IoLogoLinkedin {...props} />;
   if (name === "instagram") return <AiOutlineInstagram {...props} />;
