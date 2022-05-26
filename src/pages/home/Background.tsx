@@ -7,10 +7,10 @@ import bg04 from "../../assets/images/bg04.png";
 export const Background = (): JSX.Element => {
   return (
     <div className='absolute inset-0 -z-10'>
-      <img src={bg01} alt="Mountains"/>
-      <img src={bg02} alt="Cave"/>
-      <img src={bg03} alt="Submarine cave"/>
-      <img src={bg04} alt="Deep ocean"/>
+      <img src={bg01} alt="Mountains" className="min-h-screen object-cover"/>
+      <img src={bg02} alt="Cave" className="min-h-screen object-cover"/>
+      <img src={bg03} alt="Submarine cave" className="min-h-screen object-cover"/>
+      <img src={bg04} alt="Deep ocean" className="min-h-screen object-cover"/>
     </div>
   );
 };

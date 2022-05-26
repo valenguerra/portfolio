@@ -28,14 +28,14 @@ export const MainSection = (): JSX.Element => {
         <Paragraph>
           <Bold>To make something awesome, make it simple.</Bold>
         </Paragraph>
-        <div className="alignItems flex flex-wrap justify-between gap-8">
+        <nav className="alignItems flex flex-wrap justify-between gap-8">
           <Button expand>About&nbsp;me</Button>
           <Button expand>My&nbsp;work</Button>
           <Button expand>My&nbsp;skills</Button>
           <Button expand primary>
             Contact&nbsp;me!
           </Button>
-        </div>
+        </nav>
       </Card>
     </div>
   );
