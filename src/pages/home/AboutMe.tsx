@@ -6,7 +6,9 @@ import { SubititleIcon } from "../../components/SubtitleIcon";
 import { Paragraph } from "../../components/Text";
 import { TitleIcon } from "../../components/TitleIcon";
 
-import profile from "../../assets/images/profile.png";
+import about01 from "../../assets/images/about01.png";
+import about02 from "../../assets/images/about02.png";
+import about03 from "../../assets/images/about03.png";
 import dinosaur from "../../assets/images/dinosaur.png";
 import reading from "../../assets/images/reading.png";
 import checkCalendar from "../../assets/images/check_calendar.png";
@@ -15,22 +17,22 @@ import notebook from "../../assets/images/notebook.png";
 export const AboutMe = (): JSX.Element => {
   return (
     <Card>
-      <TitleIcon iconSrc={dinosaur} title="About me!" />
-      <div className="flex w-full justify-between">
+      <TitleIcon iconSrc={dinosaur} title="About me" />
+      <div className="flex w-full justify-between gap-8 flex-wrap">
         <img
-          src={profile}
-          alt="Valentino Guerraaaaaa"
-          className="h-24 rounded-full md:h-32"
+          src={about01}
+          alt="Valentino Guerra on a chair"
+          className="h-24 flex-1 rounded object-cover md:h-32"
         />
         <img
-          src={profile}
-          alt="Valentino Guerraaaaaa"
-          className="h-24 rounded-full md:h-32"
+          src={about02}
+          alt="Valentino Guerra with a friend"
+          className="h-24 flex-1 rounded object-cover md:h-32"
         />
         <img
-          src={profile}
-          alt="Valentino Guerraaaaaa"
-          className="h-24 rounded-full md:h-32"
+          src={about03}
+          alt="Valentino Guerra with friends"
+          className="h-24 flex-1 rounded object-cover md:h-32"
         />
       </div>
       <div className="flex flex-col gap-4">
@@ -58,6 +60,12 @@ export const AboutMe = (): JSX.Element => {
             experiencia adquirida en mis proyectos.{" "}
             <Link>¿Por qué dejé la universidad?</Link>
           </Paragraph>
+          <Paragraph>
+            Mi forma favorita de aprender es, cada cierto tiempo, armar un plan
+            de estudio basandome en las cosas que tengo ganas de aprender y que
+            creo que me serán mas útiles. Y luego dedicarle un par de horas al
+            día hasta completarlo.
+          </Paragraph>
         </Expandable>
         <Divider />
         <Expandable
@@ -83,11 +91,15 @@ export const AboutMe = (): JSX.Element => {
           title={<SubititleIcon iconSrc={notebook} title="Mis notas" />}
         >
           <Paragraph>
-            Empecé a programar hace unos 5 años con la idea de crear apps
-            móviles y juegos, pero luego me decidí por el desarrollo web.
+            Cuando aprendo algo nuevo, me gusta anotarlo para no olvidarlo.
+            Explicado con mis propias palabras de forma que, al menos a mi, me
+            sea mas fácil de entender.
+          </Paragraph>
+          <Paragraph>
+            A alguien podría servirle asi que acá lo dejo:{" "}
+            <Link>Un lugar donde escribo cosas...</Link>
           </Paragraph>
         </Expandable>
-        <Divider />
       </div>
     </Card>
   );
