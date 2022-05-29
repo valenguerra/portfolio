@@ -11,7 +11,8 @@ interface ColoredIconProps {
 interface IconProps {
   name: string;
   color?: "white" | "black";
-  clickable?: boolean;
+  className?: string;
+  onClick?: () => any;
 }
 
 export const ColoredIcon = ({
@@ -19,18 +20,20 @@ export const ColoredIcon = ({
   size = "small",
 }: ColoredIconProps): JSX.Element => {
   const isSmall = size === "small";
-  return <img src={src} className={isSmall ? "h-6" : "h-8"} />;
+  return <img src={src} className={`inline-flex ${isSmall ? "h-6" : "h-8"}`} />;
 };
 
 export const Icon = ({
   name,
   color = "white",
-  clickable = false,
+  className,
+  onClick,
 }: IconProps) => {
   const props = {
+    onClick,
     color,
     size: 24,
-    className: `inline-flex ${clickable ? "cursor-pointer" : ""}`,
+    className: `inline-flex ${onClick ? "cursor-pointer" : ""} ${className}`,
   };
 
   if (name === "arrowRight") return <FiChevronRight {...props} />;

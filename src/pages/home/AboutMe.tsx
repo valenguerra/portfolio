@@ -18,7 +18,7 @@ export const AboutMe = (): JSX.Element => {
   return (
     <Card>
       <TitleIcon iconSrc={dinosaur} title="About me" />
-      <div className="flex w-full justify-between gap-8 flex-wrap">
+      <div className="flex w-full flex-wrap justify-between gap-8">
         <img
           src={about01}
           alt="Valentino Guerra on a chair"
@@ -61,10 +61,9 @@ export const AboutMe = (): JSX.Element => {
             <Link>¿Por qué dejé la universidad?</Link>
           </Paragraph>
           <Paragraph>
-            Mi forma favorita de aprender es, cada cierto tiempo, armar un plan
-            de estudio basandome en las cosas que tengo ganas de aprender y que
-            creo que me serán mas útiles. Y luego dedicarle un par de horas al
-            día hasta completarlo.
+            Cada cierto tiempo, me gusta armar un plan de estudio basandome en
+            las cosas que tengo ganas de aprender y que creo que me serán mas
+            útiles. Y luego dedicarle un par de horas al día hasta completarlo.
           </Paragraph>
         </Expandable>
         <Divider />

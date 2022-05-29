@@ -14,7 +14,7 @@ export const SuperTitle = (): JSX.Element => {
           Valentino Guerra
         </h1>
         <h2 className="ml-1 flex text-xl font-light text-white md:ml-2 md:text-3xl">
-          React Frontend Developer
+          Frontend - Web Developer
         </h2>
       </div>
       <img

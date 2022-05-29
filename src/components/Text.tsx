@@ -3,11 +3,11 @@ interface Props {
 }
 
 export const Title = ({ children }: Props): JSX.Element => {
-  return <h2 className="text-2xl font-semibold text-white">{children}</h2>;
+  return <h3 className="text-2xl font-semibold text-white">{children}</h3>;
 };
 
 export const Subtitle = ({ children }: Props): JSX.Element => {
-  return <h3 className="text-xl font-semibold text-white">{children}</h3>;
+  return <h4 className="text-xl font-semibold text-white">{children}</h4>;
 };
 
 export const Paragraph = ({ children }: Props): JSX.Element => {

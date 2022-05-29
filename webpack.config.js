@@ -30,18 +30,13 @@ module.exports = {
         use: ["style-loader", "css-loader", "postcss-loader"],
       },
       {
-        test: /\.(png|j?g|svg|gif)?$/,
+        test: /\.(png|jpg|jpeg|svg|gif)?$/,
         loader: "file-loader",
         options: {
           outputPath: "assets",
-        }, 
-      }, 
+        },
+      }
     ],
   },
-  plugins: [
-    new HtmlWebpackPlugin({ template: "./public/index.html" }),
-    /*     new CopyWebpackPlugin({
-      patterns: [{ from: "src/assets", to: "assets" }],
-    }), */
-  ],
+  plugins: [new HtmlWebpackPlugin({ template: "./public/index.html" })],
 };

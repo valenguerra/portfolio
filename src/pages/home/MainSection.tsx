@@ -16,9 +16,9 @@ export const MainSection = (): JSX.Element => {
         <div className="flex items-center justify-between">
           <TitleIcon iconSrc={hand} title="Hello!" />
           <div className="alignItems flex gap-3">
-            <Icon name="github" clickable />
-            <Icon name="linkedIn" clickable />
-            <Icon name="instagram" clickable />
+            <Icon name="github" onClick={() => {}} />
+            <Icon name="linkedIn" onClick={() => {}} />
+            <Icon name="instagram" onClick={() => {}} />
           </div>
         </div>
         <Paragraph>
@@ -30,8 +30,8 @@ export const MainSection = (): JSX.Element => {
         </Paragraph>
         <nav className="alignItems flex flex-wrap justify-between gap-8">
           <Button expand>About&nbsp;me</Button>
-          <Button expand>My&nbsp;work</Button>
-          <Button expand>My&nbsp;skills</Button>
+          <Button expand>Projects</Button>
+          <Button expand>Skills</Button>
           <Button expand primary>
             Contact&nbsp;me!
           </Button>
