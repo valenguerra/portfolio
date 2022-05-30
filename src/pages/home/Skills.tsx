@@ -22,8 +22,13 @@ import mongodb from "../../assets/images/mongodb.png";
 import graphql from "../../assets/images/graphql.png";
 import { Frame } from "../../components/Frame";
 import { ColoredIcon } from "../../components/Icon";
+import { useContext } from "react";
+import { LanguageContext } from "../../App";
 
 export const Skills = (): JSX.Element => {
+  const language = useContext(LanguageContext);
+  const { section3 } = language?.texts;
+
   const Item = ({ name, src }: { name: string; src: string }) => (
     <Frame>
       <ColoredIcon src={src} />
@@ -37,8 +42,8 @@ export const Skills = (): JSX.Element => {
 
   return (
     <Card>
-      <TitleIcon iconSrc={chessHorse} title="Skills" />
-      <SubtitleLight>Manejo con confianza</SubtitleLight>
+      <TitleIcon iconSrc={chessHorse} title={section3.title} />
+      <SubtitleLight>{section3.subtitle1}</SubtitleLight>
       <div className="flex flex-wrap gap-4">
         <Item name="HTML" src={html} />
         <Item name="CSS" src={css} />
@@ -54,16 +59,14 @@ export const Skills = (): JSX.Element => {
         <Item name="Typescript" src={typescript} />
       </div>
       <Divider />
-      <SubtitleLight>He utilizado en proyectos pasados</SubtitleLight>
+      <SubtitleLight>{section3.subtitle2}</SubtitleLight>
       <div className="flex flex-wrap gap-4">
         <Item name="Sass" src={sass} />
         <Item name="MongoDB" src={mongodb} />
         <Item name="Flutter" src={flutter} />
       </div>
       <Divider />
-      <SubtitleLight>
-        Quiero aprender/profundizar en un futuro próximo
-      </SubtitleLight>
+      <SubtitleLight>{section3.subtitle3}</SubtitleLight>
       <div className="flex flex-wrap gap-4 pb-4">
         <Item name="GraphQL" src={graphql} />
         <Item name="MongoDB" src={mongodb} />

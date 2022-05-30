@@ -13,11 +13,18 @@ import dinosaur from "../../assets/images/dinosaur.png";
 import reading from "../../assets/images/reading.png";
 import checkCalendar from "../../assets/images/check_calendar.png";
 import notebook from "../../assets/images/notebook.png";
+import { useLanguage } from "../../hooks/useLanguage";
+import { useContext } from "react";
+import { LanguageContext } from "../../App";
 
 export const AboutMe = (): JSX.Element => {
+  const language = useContext(LanguageContext);
+  const { section2 } = language?.texts;
+  const { expandable1, expandable2, expandable3 } = section2;
+
   return (
     <Card>
-      <TitleIcon iconSrc={dinosaur} title="About me" />
+      <TitleIcon iconSrc={dinosaur} title={section2.title} />
       <div className="flex w-full flex-wrap justify-between gap-8">
         <img
           src={about01}
@@ -36,67 +43,42 @@ export const AboutMe = (): JSX.Element => {
         />
       </div>
       <div className="flex flex-col gap-4">
-        <Paragraph>Tengo 21 años.</Paragraph>
-        <Paragraph>
-          Me gusta explorar, ir de viaje, conocer gente y lugares nuevos en la
-          naturaleza.
-        </Paragraph>
-        <Paragraph>
-          Desde pequeño me gusta crear cosas, siempre que tenía un problema lo
-          solucionaba inventando algo. O simplemente inventaba cosas por
-          diversión.
-        </Paragraph>
-        <Paragraph>
-          Empecé a programar hace unos 5 años con la idea de crear apps móviles
-          y juegos, pero luego me decidí por el desarrollo web.
-        </Paragraph>
+        <Paragraph>{section2.ph1}</Paragraph>
+        <Paragraph>{section2.ph2}</Paragraph>
+        <Paragraph>{section2.ph3}</Paragraph>
+        <Paragraph>{section2.ph4}</Paragraph>
         <Divider />
         <Expandable
-          title={<SubititleIcon iconSrc={reading} title="Mis estudios" />}
+          title={<SubititleIcon iconSrc={reading} title={expandable1.title} />}
         >
-          <Paragraph>No estudié en la universidad.</Paragraph>
+          <Paragraph>{expandable1.ph1}</Paragraph>
           <Paragraph>
-            Todos mis conocimientos vienen de mis estudios de “autodidacta” y la
-            experiencia adquirida en mis proyectos.{" "}
-            <Link>¿Por qué dejé la universidad?</Link>
+            {expandable1.ph2[0]} <Link>{expandable1.ph2[1]}</Link>
           </Paragraph>
-          <Paragraph>
-            Cada cierto tiempo, me gusta armar un plan de estudio basandome en
-            las cosas que tengo ganas de aprender y que creo que me serán mas
-            útiles. Y luego dedicarle un par de horas al día hasta completarlo.
-          </Paragraph>
+          <Paragraph>{expandable1.ph3}</Paragraph>
         </Expandable>
         <Divider />
         <Expandable
-          title={<SubititleIcon iconSrc={checkCalendar} title="Mi día a día" />}
+          title={
+            <SubititleIcon iconSrc={checkCalendar} title={expandable2.title} />
+          }
         >
-          <Paragraph>
-            Considero sumamente importante mantener una vida balanceada, lo cual
-            implica:
-            <ul className="mt-2 flex list-disc flex-col gap-2 pl-6">
-              <li>No exceder mis horas de trabajo.</li>
-              <li>Hacer deporte varias veces por semana.</li>
-              <li>
-                Cada cierto tiempo usando la computadora, salir a caminar para
-                despejar la mente.
-              </li>
-              <li>Dejar tiempo para desconectar de todo y disfrutar.</li>
-              <li>Dormir bien, 8 horas por día.</li>
-            </ul>
-          </Paragraph>
+          <Paragraph>{expandable2.ph1} </Paragraph>
+          <ul className="mt-2 flex list-disc flex-col gap-2 pl-6">
+            <li>{expandable2.list[0]}</li>
+            <li>{expandable2.list[1]}</li>
+            <li>{expandable2.list[2]}</li>
+            <li>{expandable2.list[3]}</li>
+            <li>{expandable2.list[4]}</li>
+          </ul>
         </Expandable>
         <Divider />
         <Expandable
-          title={<SubititleIcon iconSrc={notebook} title="Mis notas" />}
+          title={<SubititleIcon iconSrc={notebook} title={expandable3.title} />}
         >
+          <Paragraph>{expandable3.ph1}</Paragraph>
           <Paragraph>
-            Cuando aprendo algo nuevo, me gusta anotarlo para no olvidarlo.
-            Explicado con mis propias palabras de forma que, al menos a mi, me
-            sea mas fácil de entender.
-          </Paragraph>
-          <Paragraph>
-            A alguien podría servirle asi que acá lo dejo:{" "}
-            <Link>Un lugar donde escribo cosas...</Link>
+            {expandable3.ph2[0]} <Link>{expandable3.ph2[1]}</Link>
           </Paragraph>
         </Expandable>
       </div>

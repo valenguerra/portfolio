@@ -3,9 +3,11 @@ import { TitleIcon } from "../../components/TitleIcon";
 
 import credentials from "../../assets/images/credentials.png";
 import { TextField } from "../../components/TextField";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Button } from "../../components/Button";
 import { Icon } from "../../components/Icon";
+import { useLanguage } from "../../hooks/useLanguage";
+import { LanguageContext } from "../../App";
 
 interface ContactFields {
   fullName: string;
@@ -14,6 +16,8 @@ interface ContactFields {
 }
 
 export const ContactMe = (): JSX.Element => {
+  const language = useContext(LanguageContext);
+  const { section5 } = language?.texts;
   const empty: ContactFields = { email: "", fullName: "", message: "" };
   const [fields, setFields] = useState<ContactFields>(empty);
 
@@ -22,19 +26,19 @@ export const ContactMe = (): JSX.Element => {
 
   return (
     <Card>
-      <TitleIcon iconSrc={credentials} title="Contact Me!" />
+      <TitleIcon iconSrc={credentials} title={section5.title} />
       <div className="flex flex-col items-stretch gap-4">
         <div className="flex flex-wrap justify-between gap-4">
           <TextField
             name="fullName"
             value={fields.fullName}
-            placeholder="Nombre"
+            placeholder={section5.placeholder1}
             onChange={onFieldChange}
             className="flex-1"
           />
           <TextField
             name="email"
-            value={fields.email}
+            value={section5.placeholder2}
             placeholder="Email"
             onChange={onFieldChange}
             className="flex-1"
@@ -43,7 +47,7 @@ export const ContactMe = (): JSX.Element => {
         <TextField
           name="message"
           value={fields.message}
-          placeholder="Message"
+          placeholder={section5.placeholder3}
           onChange={onFieldChange}
           textarea
           className="h-48 resize-none"

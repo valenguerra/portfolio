@@ -7,14 +7,19 @@ import { SuperTitle } from "./SuperTitle";
 import { TitleIcon } from "../../components/TitleIcon";
 
 import hand from "../../assets/images/hand.png";
+import { useContext } from "react";
+import { LanguageContext } from "../../App";
 
 export const MainSection = (): JSX.Element => {
+  const language = useContext(LanguageContext);
+  const { section1 } = language?.texts;
+
   return (
     <div className="flex flex-col gap-16 md:gap-32">
       <SuperTitle />
       <Card>
         <div className="flex items-center justify-between">
-          <TitleIcon iconSrc={hand} title="Hello!" />
+          <TitleIcon iconSrc={hand} title={section1.cardTitle} />
           <div className="alignItems flex gap-3">
             <Icon name="github" onClick={() => {}} />
             <Icon name="linkedIn" onClick={() => {}} />
@@ -22,18 +27,19 @@ export const MainSection = (): JSX.Element => {
           </div>
         </div>
         <Paragraph>
-          I am a software developer from <Link>Mar del Plata, Argentina</Link>,
-          who loves to <Bold>explore</Bold> and <Bold>create</Bold> new things.
+          {section1.ph1[0]} <Link>{section1.ph1[1]}</Link>
+          {section1.ph1[2]} <Bold>{section1.ph1[3]}</Bold> {section1.ph1[4]}{" "}
+          <Bold>{section1.ph1[5]}</Bold> {section1.ph1[6]}
         </Paragraph>
         <Paragraph>
-          <Bold>To make something awesome, make it simple.</Bold>
+          <Bold>{section1.ph2}</Bold>
         </Paragraph>
         <nav className="alignItems flex flex-wrap justify-between gap-8">
-          <Button expand>About&nbsp;me</Button>
-          <Button expand>Projects</Button>
-          <Button expand>Skills</Button>
+          <Button expand>{section1.btn1}</Button>
+          <Button expand>{section1.btn2}</Button>
+          <Button expand>{section1.btn3}</Button>
           <Button expand primary>
-            Contact&nbsp;me!
+            {section1.btn4}
           </Button>
         </nav>
       </Card>
