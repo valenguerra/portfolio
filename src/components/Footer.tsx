@@ -8,9 +8,9 @@ export const Footer = (): JSX.Element => {
   const { footer } = language?.texts;
 
   return (
-    <footer className="flex items-center gap-4 py-4 text-white">
-      <span className="h-6 border-r border-light-48/160 pr-4">{footer}</span>
+    <footer className="flex flex-col items-center gap-4 py-4 text-white sm:flex-row-reverse">
       <Link to={EMAIL_TO}>{EMAIL}</Link>
+      <span className="h-6 border-light-48/160 text-sm sm:border-r sm:pr-4 sm:text-base">{footer}</span>
     </footer>
   );
 };
