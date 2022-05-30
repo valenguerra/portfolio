@@ -9,7 +9,7 @@ import { TitleIcon } from "../../components/TitleIcon";
 import hand from "../../assets/images/hand.png";
 import { useContext } from "react";
 import { LanguageContext } from "../../App";
-import { GOOGLE_MAPS } from "../../app/consts";
+import { GITHUB, GOOGLE_MAPS, INSTAGRAM, LINKEDIN } from "../../app/consts";
 
 export const MainSection = (): JSX.Element => {
   const language = useContext(LanguageContext);
@@ -22,9 +22,15 @@ export const MainSection = (): JSX.Element => {
         <div className="flex items-center justify-between">
           <TitleIcon iconSrc={hand} title={section1.cardTitle} />
           <div className="alignItems flex gap-3">
-            <Icon name="github" onClick={() => {}} />
-            <Icon name="linkedIn" onClick={() => {}} />
-            <Icon name="instagram" onClick={() => {}} />
+            <a href={GITHUB} target="_blank">
+              <Icon name="github" />
+            </a>
+            <a href={LINKEDIN} target="_blank">
+              <Icon name="linkedIn" />
+            </a>
+            <a href={INSTAGRAM} target="_blank">
+              <Icon name="instagram" />
+            </a>
           </div>
         </div>
         <Paragraph>
