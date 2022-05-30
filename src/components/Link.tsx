@@ -1,15 +1,12 @@
 interface Props {
   children: React.ReactNode;
-  onClick?: () => {};
+  to?: string;
 }
 
-export const Link = ({ children, onClick }: Props): JSX.Element => {
+export const Link = ({ children, to }: Props): JSX.Element => {
   return (
-    <span
-      onClick={onClick}
-      className="py-1/2 inline-flex cursor-pointer rounded bg-white bg-opacity-10 px-2 text-sm font-light text-white transition hover:bg-opacity-20"
-    >
+    <a href={to} target="_blank" className="py-1/2 inline-flex cursor-pointer rounded bg-white bg-opacity-10 px-2 text-sm font-light text-white transition hover:bg-opacity-20">
       {children}
-    </span>
+    </a>
   );
 };

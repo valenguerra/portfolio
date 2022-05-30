@@ -1,14 +1,19 @@
 import { recursiveFilterObjectByKey } from "../app/util";
 import { useState } from "react";
 import { Language, LangCode } from "../types";
-import texts from "../app/texts.json";
+import texts2 from "../app/texts.json";
 
 export const useLanguage = (): Language => {
-  const [selected, setSelected] = useState<LangCode>("es");
+  const [selected, setSelected] = useState<LangCode>("en");
 
-  const toggle = () => setSelected(selected === "es" ? "en" : "es");
+  const toggle = () => {
+    setSelected(selected === "es" ? "en" : "es");
+    //console.log(selected);
+  };
 
-  const selectedTexts = recursiveFilterObjectByKey(texts, selected);
+  console.log(texts2);
+
+  const selectedTexts = recursiveFilterObjectByKey(texts2, selected);
 
   return { texts: selectedTexts, toggle };
 };

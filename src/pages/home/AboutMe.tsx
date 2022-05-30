@@ -16,6 +16,7 @@ import notebook from "../../assets/images/notebook.png";
 import { useLanguage } from "../../hooks/useLanguage";
 import { useContext } from "react";
 import { LanguageContext } from "../../App";
+import { NOTION_COLLAGE, NOTION_NOTES } from "../../app/consts";
 
 export const AboutMe = (): JSX.Element => {
   const language = useContext(LanguageContext);
@@ -26,21 +27,9 @@ export const AboutMe = (): JSX.Element => {
     <Card>
       <TitleIcon iconSrc={dinosaur} title={section2.title} />
       <div className="flex w-full flex-wrap justify-between gap-8">
-        <img
-          src={about01}
-          alt="Valentino Guerra on a chair"
-          className="h-24 flex-1 rounded object-cover md:h-32"
-        />
-        <img
-          src={about02}
-          alt="Valentino Guerra with a friend"
-          className="h-24 flex-1 rounded object-cover md:h-32"
-        />
-        <img
-          src={about03}
-          alt="Valentino Guerra with friends"
-          className="h-24 flex-1 rounded object-cover md:h-32"
-        />
+        <img src={about01} alt="Valentino Guerra on a chair" className="h-24 flex-1 rounded object-cover md:h-32" />
+        <img src={about02} alt="Valentino Guerra with a friend" className="h-24 flex-1 rounded object-cover md:h-32" />
+        <img src={about03} alt="Valentino Guerra with friends" className="h-24 flex-1 rounded object-cover md:h-32" />
       </div>
       <div className="flex flex-col gap-4">
         <Paragraph>{section2.ph1}</Paragraph>
@@ -48,21 +37,15 @@ export const AboutMe = (): JSX.Element => {
         <Paragraph>{section2.ph3}</Paragraph>
         <Paragraph>{section2.ph4}</Paragraph>
         <Divider />
-        <Expandable
-          title={<SubititleIcon iconSrc={reading} title={expandable1.title} />}
-        >
+        <Expandable title={<SubititleIcon iconSrc={reading} title={expandable1.title} />}>
           <Paragraph>{expandable1.ph1}</Paragraph>
           <Paragraph>
-            {expandable1.ph2[0]} <Link>{expandable1.ph2[1]}</Link>
+            {expandable1.ph2[0]} <Link to={NOTION_COLLAGE}>{expandable1.ph2[1]}</Link>
           </Paragraph>
           <Paragraph>{expandable1.ph3}</Paragraph>
         </Expandable>
         <Divider />
-        <Expandable
-          title={
-            <SubititleIcon iconSrc={checkCalendar} title={expandable2.title} />
-          }
-        >
+        <Expandable title={<SubititleIcon iconSrc={checkCalendar} title={expandable2.title} />}>
           <Paragraph>{expandable2.ph1} </Paragraph>
           <ul className="mt-2 flex list-disc flex-col gap-2 pl-6">
             <li>{expandable2.list[0]}</li>
@@ -73,12 +56,10 @@ export const AboutMe = (): JSX.Element => {
           </ul>
         </Expandable>
         <Divider />
-        <Expandable
-          title={<SubititleIcon iconSrc={notebook} title={expandable3.title} />}
-        >
+        <Expandable title={<SubititleIcon iconSrc={notebook} title={expandable3.title} />}>
           <Paragraph>{expandable3.ph1}</Paragraph>
           <Paragraph>
-            {expandable3.ph2[0]} <Link>{expandable3.ph2[1]}</Link>
+            {expandable3.ph2[0]} <Link to={NOTION_NOTES}>{expandable3.ph2[1]}</Link>
           </Paragraph>
         </Expandable>
       </div>

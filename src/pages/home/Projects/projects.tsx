@@ -19,10 +19,10 @@ import students1 from "../../../assets/images/screenshots/students_1.png";
 import students2 from "../../../assets/images/screenshots/students_2.png";
 import phSeller1 from "../../../assets/images/screenshots/ph_seller_1.png";
 import phSeller2 from "../../../assets/images/screenshots/ph_seller_2.png";
+import { ENIGMATH, GITHUB_PARTNER, PHOTOGRAPHY_SELLER, SOCIOS_AOM, VALENTINO_GUERRA, WEB_AOM } from "../../../app/consts";
 
 const MobileGames = (): JSX.Element => {
   const language = useContext(LanguageContext);
-  console.log(language)
   const { section4 } = language?.texts;
   const { title, ph1, ph2 } = section4.list[0];
 
@@ -59,13 +59,11 @@ const Enigmath = (): JSX.Element => {
         ]}
       />
       <Paragraph>
-        {ph1[0]}
-        <Link>{ph1[1]}</Link>
-        {ph1[2]}
+        {ph1[0]} <Link to={GITHUB_PARTNER}>{ph1[1]}</Link> {ph1[2]}
       </Paragraph>
       <Paragraph>{ph2}</Paragraph>
       <Paragraph>
-        {ph3[0]} <Link>{ph3[1]}</Link>
+        {ph3[0]} <Link to={ENIGMATH}>{ph3[1]}</Link>
       </Paragraph>
     </>
   );
@@ -88,7 +86,7 @@ const SociosAOM = (): JSX.Element => {
       />
       <Paragraph>{ph1}</Paragraph>
       <Paragraph>
-        {ph2[0]} <Link>{ph2[1]}</Link> {ph2[2]}
+        {ph2[0]} <Link to={SOCIOS_AOM}>{ph2[1]}</Link> {ph2[2]}
       </Paragraph>
     </>
   );
@@ -103,7 +101,9 @@ const WebAOM = (): JSX.Element => {
     <>
       <Title>{title}</Title>
       <img src={webAom} alt="Web AOM" className="w-full rounded" />
-      <Paragraph>{ph1}</Paragraph>
+      <Paragraph>
+        {ph1[0]} <Link to={WEB_AOM}>{ph1[1]}</Link>
+      </Paragraph>
       <Paragraph>{ph2}</Paragraph>
     </>
   );
@@ -145,9 +145,7 @@ const PhotographySeller = (): JSX.Element => {
       />
       <Paragraph>{ph1}</Paragraph>
       <Paragraph>
-        {ph2[0]}
-        <Link>{ph2[1]}</Link>
-        {ph2[2]}
+        {ph2[0]} <Link to={PHOTOGRAPHY_SELLER}>{ph2[1]}</Link> {ph2[2]}
       </Paragraph>
     </>
   );
@@ -156,27 +154,19 @@ const PhotographySeller = (): JSX.Element => {
 const ValentinoGuerra = (): JSX.Element => {
   const language = useContext(LanguageContext);
   const { section4 } = language?.texts;
-  const { title, ph1, ph2, ph3 } = section4.list[6];
+  const { title, ph1, ph2, ph3, btn } = section4.list[6];
 
   return (
     <>
       <Title>{title}</Title>
+      <div>
+        <Link to={VALENTINO_GUERRA}>{btn}</Link>
+      </div>
       <Paragraph>{ph1}</Paragraph>
       <Paragraph>{ph2}</Paragraph>
-      <Paragraph>
-        {ph3[0]}
-        <Link>{ph3[1]}</Link>
-      </Paragraph>
+      <Paragraph>{ph3}</Paragraph>
     </>
   );
 };
 
-export const projects = [
-  <MobileGames />,
-  <Enigmath />,
-  <SociosAOM />,
-  <WebAOM />,
-  <StudentsAssociation />,
-  <PhotographySeller />,
-  <ValentinoGuerra />,
-];
+export const projects = [<MobileGames />, <Enigmath />, <SociosAOM />, <WebAOM />, <StudentsAssociation />, <PhotographySeller />, <ValentinoGuerra />];

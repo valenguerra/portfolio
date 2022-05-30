@@ -9,6 +9,7 @@ import { TitleIcon } from "../../components/TitleIcon";
 import hand from "../../assets/images/hand.png";
 import { useContext } from "react";
 import { LanguageContext } from "../../App";
+import { GOOGLE_MAPS } from "../../app/consts";
 
 export const MainSection = (): JSX.Element => {
   const language = useContext(LanguageContext);
@@ -27,9 +28,8 @@ export const MainSection = (): JSX.Element => {
           </div>
         </div>
         <Paragraph>
-          {section1.ph1[0]} <Link>{section1.ph1[1]}</Link>
-          {section1.ph1[2]} <Bold>{section1.ph1[3]}</Bold> {section1.ph1[4]}{" "}
-          <Bold>{section1.ph1[5]}</Bold> {section1.ph1[6]}
+          {section1.ph1[0]} <Link to={GOOGLE_MAPS}>{section1.ph1[1]}</Link>
+          {section1.ph1[2]} <Bold>{section1.ph1[3]}</Bold> {section1.ph1[4]} <Bold>{section1.ph1[5]}</Bold> {section1.ph1[6]}
         </Paragraph>
         <Paragraph>
           <Bold>{section1.ph2}</Bold>

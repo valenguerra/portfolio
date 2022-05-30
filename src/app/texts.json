@@ -131,11 +131,11 @@
       "ph2": {
         "en": [
           "Someone might find it useful, so here it is:",
-          "A place where I write things..."
+          "A place where I write things... (mostly spanish)"
         ],
         "es": [
           "A alguien podría servirle asi que acá lo dejo:",
-          "Un lugar donde escribo cosas... (mostly spanish)"
+          "Un lugar donde escribo cosas..."
         ]
       }
     }
@@ -260,7 +260,7 @@
         "ph2": {
           "en": [
             "Made with React and Next.js, it helped me to understand in depth the use of server-side rendering offered by Next.js. The website is not currently up and running but you can visit the",
-            "Github repositoy",
+            "GitHub repositoy",
             "since it's public."
           ],
           "es": [
@@ -272,6 +272,7 @@
       },
       {
         "title": "Valentino Guerra",
+        "btn": { "en": "GitHub repository", "es": "Repositorio de GitHub" },
         "ph1": {
           "en": "Yes, the same web page you are on now. No need to show images of it, I just wanted to tell you how I did it.",
           "es": "Si, la misma página web en la que estas ahora. De poco serviría mostrar imágenes, simplemente queria contar como la hice."
@@ -281,14 +282,8 @@
           "es": "Primero hice el diseño en Figma, lo cual me llevo unos días. Me encanta diseñar interfaces, pero es una tarea agotadora aunque no lo parezca."
         },
         "ph3": {
-          "en": [
-            "Next, it was time to choose which technologies to program it with. I decided not to use Next.js, but not create-react-app either, since I wanted to have the experience of configuring React myself, using Webpack. I also chose Typescript, I hadn't used it in projects for a long time and I wanted to get back to it. Finally I chose TailwindCSS over StyledComponents, simply because I wanted to try something different.",
-            "Github repositoy"
-          ],
-          "es": [
-            "Posteriormente, era el momento de elegir con que tecnologías programarla. Me decidí por no utilizar Next.js, pero tampoco create-react-app ya que quería tener la experiencia de configurar React yo mismo, utilizando Webpack. También elegí Typescript, hacía mucho que no lo utilizaba en proyectos y tenía ganas de retomarlo. Por último me quedé con TailwindCSS por sobre StyledComponents, simplemente porque quería probar algo distinto.",
-            "Repositorio de GitHub"
-          ]
+          "en": "Next, it was time to choose which technologies to program it with. I decided not to use Next.js, but not create-react-app either, since I wanted to have the experience of configuring React myself, using Webpack. I also chose Typescript, I hadn't used it in projects for a long time and I wanted to get back to it. Finally I chose TailwindCSS over StyledComponents, simply because I wanted to try something different. ",
+          "es": "Posteriormente, era el momento de elegir con que tecnologías programarla. Me decidí por no utilizar Next.js, pero tampoco create-react-app ya que quería tener la experiencia de configurar React yo mismo, utilizando Webpack. También elegí Typescript, hacía mucho que no lo utilizaba en proyectos y tenía ganas de retomarlo. Por último me quedé con TailwindCSS por sobre StyledComponents, simplemente porque quería probar algo distinto. "
         }
       }
     ]

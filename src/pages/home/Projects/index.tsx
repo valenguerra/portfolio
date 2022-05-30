@@ -10,7 +10,7 @@ import { LanguageContext } from "../../../App";
 
 export const Projects = (): JSX.Element => {
   const language = useContext(LanguageContext);
-  const { section3 } = language?.texts;
+  const { section4} = language?.texts;
   const [currentProject, setCurrentProject] = useState<number>(0);
 
   const goToNextProject = () => {
@@ -26,7 +26,7 @@ export const Projects = (): JSX.Element => {
   return (
     <Card>
       <div className="flex items-center justify-between">
-        <TitleIcon title={section3.title} iconSrc={briefcase} />
+        <TitleIcon title={section4.title} iconSrc={briefcase} />
         <PageNav
           className="hidden sm:flex"
           currentPage={currentProject + 1}

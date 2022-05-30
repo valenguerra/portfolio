@@ -1,5 +1,5 @@
 export const recursiveFilterObjectByKey = (obj: any, key: string) => {
-  const output = Object.assign(obj, {});
+  const output = structuredClone(obj);
 
   for (let k in obj) {
     if (typeof obj[k] === "string") continue;
@@ -9,6 +9,5 @@ export const recursiveFilterObjectByKey = (obj: any, key: string) => {
     }
     output[k] = recursiveFilterObjectByKey(obj[k], key);
   }
-
   return output;
 };

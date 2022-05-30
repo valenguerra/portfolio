@@ -38,8 +38,8 @@ export const ContactMe = (): JSX.Element => {
           />
           <TextField
             name="email"
-            value={section5.placeholder2}
-            placeholder="Email"
+            value={fields.email}
+            placeholder={section5.placeholder2}
             onChange={onFieldChange}
             className="flex-1"
           />
