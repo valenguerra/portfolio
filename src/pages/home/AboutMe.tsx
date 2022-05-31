@@ -13,18 +13,17 @@ import dinosaur from "../../assets/images/dinosaur.png";
 import reading from "../../assets/images/reading.png";
 import checkCalendar from "../../assets/images/check_calendar.png";
 import notebook from "../../assets/images/notebook.png";
-import { useLanguage } from "../../hooks/useLanguage";
-import { useContext } from "react";
+import React, { RefObject, useContext } from "react";
 import { LanguageContext } from "../../App";
 import { NOTION_COLLAGE, NOTION_NOTES } from "../../app/consts";
 
-export const AboutMe = (): JSX.Element => {
+export const AboutMe = React.forwardRef<HTMLElement,  {}>(({}, ref):JSX.Element => {
   const language = useContext(LanguageContext);
   const { section2 } = language?.texts;
   const { expandable1, expandable2, expandable3 } = section2;
 
   return (
-    <Card>
+    <Card ref={ref}>
       <TitleIcon iconSrc={dinosaur} title={section2.title} />
       <div className="flex w-full flex-wrap justify-between gap-8">
         <img src={about01} alt="Valentino Guerra on a chair" className="h-24 flex-1 rounded object-cover md:h-32" />
@@ -65,4 +64,4 @@ export const AboutMe = (): JSX.Element => {
       </div>
     </Card>
   );
-};
+});

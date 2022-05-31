@@ -31,10 +31,12 @@ export const Button = ({
       font-medium 
       shadow 
       transition 
+      whitespace-nowrap
       ${cs(expand, "flex-1")} 
       ${cs(primary, "text-slate-900 hover:bg-slate-300", "border border-white bg-opacity-0 text-white hover:bg-opacity-10")}
       ${cs(disabled, "cursor-default opacity-50 hover:bg-white")}
       ${className} 
+      
       `}
     >
       {children}

@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.tsx",
@@ -35,8 +36,15 @@ module.exports = {
         options: {
           outputPath: "assets",
         },
-      }
+      },
     ],
   },
-  plugins: [new HtmlWebpackPlugin({ template: "./public/index.html" })],
+  plugins: [
+    new HtmlWebpackPlugin({ template: "./public/index.html", inject: "head" }),
+    new CopyPlugin({
+      patterns: [
+        { from: "public/favicon", to: "favicon" },
+      ],
+    }),
+  ],
 };

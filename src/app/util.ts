@@ -19,3 +19,5 @@ export const cs = (condition: boolean, classes: string, elseClasses: string = ""
 };
 
 export const parseBool = (value: any) => (value ? true : false);
+
+export const varToString = (varObj: any) => Object.keys(varObj)[0];

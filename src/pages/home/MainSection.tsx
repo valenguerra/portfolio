@@ -7,13 +7,26 @@ import { SuperTitle } from "./SuperTitle";
 import { TitleIcon } from "../../components/TitleIcon";
 
 import hand from "../../assets/images/hand.png";
-import { useContext } from "react";
+import { Ref, useContext } from "react";
 import { LanguageContext } from "../../App";
 import { GITHUB, GOOGLE_MAPS, INSTAGRAM, LINKEDIN } from "../../app/consts";
+import { RefObject } from "react";
 
-export const MainSection = (): JSX.Element => {
+interface Props {
+  aboutMeRef: RefObject<HTMLElement>;
+  skillsRef: RefObject<HTMLElement>;
+  projectsRef: RefObject<HTMLElement>;
+  contactMeRef: RefObject<HTMLElement>;
+}
+
+export const MainSection = ({ aboutMeRef, contactMeRef, projectsRef, skillsRef }: Props): JSX.Element => {
   const language = useContext(LanguageContext);
   const { section1 } = language?.texts;
+
+  const goToSection = (ref: RefObject<HTMLElement>) => {
+    const top = ref.current?.offsetTop ?? 0;
+    window.scrollTo({ top: top - 50, behavior: "smooth" });
+  };
 
   return (
     <div className="flex flex-col gap-16 md:gap-32">
@@ -41,10 +54,16 @@ export const MainSection = (): JSX.Element => {
           <Bold>{section1.ph2}</Bold>
         </Paragraph>
         <nav className="alignItems flex flex-wrap justify-between gap-8">
-          <Button expand>{section1.btn1}</Button>
-          <Button expand>{section1.btn2}</Button>
-          <Button expand>{section1.btn3}</Button>
-          <Button expand primary>
+          <Button expand onClick={() => goToSection(aboutMeRef)}>
+            {section1.btn1}
+          </Button>
+          <Button expand onClick={() => goToSection(skillsRef)}>
+            {section1.btn2}
+          </Button>
+          <Button expand onClick={() => goToSection(projectsRef)}>
+            {section1.btn3}
+          </Button>
+          <Button expand primary onClick={() => goToSection(contactMeRef)}>
             {section1.btn4}
           </Button>
         </nav>

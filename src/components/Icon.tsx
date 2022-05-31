@@ -2,9 +2,9 @@ import { FiChevronRight, FiChevronLeft, FiChevronDown } from "react-icons/fi";
 import { AiOutlineGithub, AiOutlineInstagram } from "react-icons/ai";
 import { ImFileEmpty } from "react-icons/im";
 import { IoLogoLinkedin } from "react-icons/io";
+import { ImageProps } from "../types";
 
-interface ColoredIconProps {
-  src: string;
+interface ColoredIconProps extends ImageProps {
   size?: "small" | "big";
 }
 
@@ -15,20 +15,12 @@ interface IconProps {
   onClick?: () => any;
 }
 
-export const ColoredIcon = ({
-  src,
-  size = "small",
-}: ColoredIconProps): JSX.Element => {
+export const ColoredIcon = ({ src, alt, size = "small" }: ColoredIconProps): JSX.Element => {
   const isSmall = size === "small";
-  return <img src={src} className={`inline-flex ${isSmall ? "h-6" : "h-8"}`} />;
+  return <img src={src} alt={alt} className={`inline-flex ${isSmall ? "h-6" : "h-8"}`} />;
 };
 
-export const Icon = ({
-  name,
-  color = "white",
-  className,
-  onClick,
-}: IconProps) => {
+export const Icon = ({ name, color = "white", className, onClick }: IconProps) => {
   const props = {
     onClick,
     color,

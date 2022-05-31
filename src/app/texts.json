@@ -129,14 +129,8 @@
         "es": "Cuando aprendo algo nuevo, me gusta anotarlo para no olvidarlo. Explicado con mis propias palabras de forma que, al menos para mí, me sea más fácil de entender."
       },
       "ph2": {
-        "en": [
-          "Someone might find it useful, so here it is:",
-          "A place where I write things... (mostly spanish)"
-        ],
-        "es": [
-          "A alguien podría servirle asi que acá lo dejo:",
-          "Un lugar donde escribo cosas..."
-        ]
+        "en": ["Someone might find it useful, so here it is:", "A place where I write things... (mostly spanish)"],
+        "es": ["A alguien podría servirle asi que acá lo dejo:", "Un lugar donde escribo cosas..."]
       }
     }
   },
@@ -220,10 +214,7 @@
       {
         "title": "Web AOM",
         "ph1": {
-          "en": [
-            "One of the first websites we developed, also for the Association of Dentists of Mar del Plata.",
-            "aom.org.ar"
-          ],
+          "en": ["One of the first websites we developed, also for the Association of Dentists of Mar del Plata.", "aom.org.ar"],
           "es": [
             "Una de las primeros sitios web que desarrollamos, también para la Asociación de Odontólogos de Mar del Plata.",
             "aom.org.ar"
@@ -301,6 +292,16 @@
     "placeholder3": {
       "en": "Message",
       "es": "Mensaje"
+    },
+    "sent": {
+      "subtitle": {
+        "en": "Thank you!",
+        "es": "Muchas gracias!"
+      },
+      "ph1": {
+        "en": "I will contact you as soon as possible",
+        "es": "Me contactaré contigo lo antes posible"
+      }
     }
   },
   "footer": {

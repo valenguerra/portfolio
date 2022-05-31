@@ -1,7 +1,10 @@
 import { Card } from "../../components/Card";
 import { Divider } from "../../components/Divider";
-import { Subtitle } from "../../components/Text";
 import { TitleIcon } from "../../components/TitleIcon";
+import { ColoredIcon } from "../../components/Icon";
+import React, { RefObject, useContext } from "react";
+import { LanguageContext } from "../../App";
+import { Frame } from "../../components/Frame";
 
 import chessHorse from "../../assets/images/chess_horse.png";
 import html from "../../assets/images/html.png";
@@ -20,28 +23,22 @@ import sass from "../../assets/images/sass.png";
 import flutter from "../../assets/images/flutter.png";
 import mongodb from "../../assets/images/mongodb.png";
 import graphql from "../../assets/images/graphql.png";
-import { Frame } from "../../components/Frame";
-import { ColoredIcon } from "../../components/Icon";
-import { useContext } from "react";
-import { LanguageContext } from "../../App";
 
-export const Skills = (): JSX.Element => {
+export const Skills = React.forwardRef<HTMLElement, {}>(({}, ref): JSX.Element => {
   const language = useContext(LanguageContext);
   const { section3 } = language?.texts;
 
   const Item = ({ name, src }: { name: string; src: string }) => (
     <Frame>
-      <ColoredIcon src={src} />
+      <ColoredIcon src={src} alt={name} />
       {name}
     </Frame>
   );
 
-  const SubtitleLight = ({ children }: { children: string }) => (
-    <span className="text-lg font-light text-white">{children}</span>
-  );
+  const SubtitleLight = ({ children }: { children: string }) => <span className="text-lg font-light text-white">{children}</span>;
 
   return (
-    <Card>
+    <Card ref={ref}>
       <TitleIcon iconSrc={chessHorse} title={section3.title} />
       <SubtitleLight>{section3.subtitle1}</SubtitleLight>
       <div className="flex flex-wrap gap-4">
@@ -74,4 +71,4 @@ export const Skills = (): JSX.Element => {
       </div>
     </Card>
   );
-};
+});

@@ -1,6 +1,6 @@
 import { Card } from "../../../components/Card";
 import { TitleIcon } from "../../../components/TitleIcon";
-import { useContext, useState } from "react";
+import React, { RefObject, useContext, useState } from "react";
 import { PageNav } from "../../../components/PageNav";
 import { Divider } from "../../../components/Divider";
 import { projects } from "./projects";
@@ -8,9 +8,9 @@ import { projects } from "./projects";
 import briefcase from "../../../assets/images/briefcase.png";
 import { LanguageContext } from "../../../App";
 
-export const Projects = (): JSX.Element => {
+export const Projects = React.forwardRef<HTMLElement, {}>(({}, ref): JSX.Element => {
   const language = useContext(LanguageContext);
-  const { section4} = language?.texts;
+  const { section4 } = language?.texts;
   const [currentProject, setCurrentProject] = useState<number>(0);
 
   const goToNextProject = () => {
@@ -24,7 +24,7 @@ export const Projects = (): JSX.Element => {
   };
 
   return (
-    <Card>
+    <Card ref={ref}>
       <div className="flex items-center justify-between">
         <TitleIcon title={section4.title} iconSrc={briefcase} />
         <PageNav
@@ -47,4 +47,4 @@ export const Projects = (): JSX.Element => {
       </div>
     </Card>
   );
-};
+});

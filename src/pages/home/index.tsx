@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { LanguageContext } from "../../App";
 import { Footer } from "../../components/Footer";
 import { AboutMe } from "./AboutMe";
@@ -11,7 +11,11 @@ import { Skills } from "./Skills";
 export const Home = (): JSX.Element => {
   const language = useContext(LanguageContext);
   const { section1 } = language?.texts;
-  
+  const aboutMeRef = useRef<HTMLElement>(null);
+  const skillsRef = useRef<HTMLElement>(null);
+  const projectsRef = useRef<HTMLElement>(null);
+  const contactMeRef = useRef<HTMLElement>(null);
+
   return (
     <>
       <div className="relative flex w-full flex-col items-center gap-24 overflow-hidden">
@@ -24,12 +28,12 @@ export const Home = (): JSX.Element => {
             >
               {section1.btn}
             </span>
-            <MainSection />
+            <MainSection {...{ aboutMeRef, skillsRef, projectsRef, contactMeRef }} />
           </div>
-          <AboutMe />
-          <Skills />
-          <Projects />
-          <ContactMe />
+          <AboutMe ref={aboutMeRef} />
+          <Skills ref={skillsRef} />
+          <Projects ref={projectsRef} />
+          <ContactMe ref={contactMeRef} />
         </main>
         <Footer />
       </div>

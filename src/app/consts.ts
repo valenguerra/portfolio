@@ -17,3 +17,4 @@ export const GOOGLE_MAPS = "https://www.google.com/maps/place/Mar+del+Plata";
 export const GITHUB_PARTNER = "https://github.com/mirandaink01";
 export const NOTION_NOTES = "https://valentinoguerra.notion.site/Notas-0fc9b64f2628415784c174f01b6783d7";
 export const NOTION_COLLAGE = "https://valentinoguerra.notion.site/Porqu-dej-la-universidad-b03041534924400598248ac9f437b7f4";
+export const EMAIL_REGEX = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
