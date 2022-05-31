@@ -10,24 +10,15 @@ interface Props {
   textarea?: boolean;
 }
 
-export const TextField = ({
-  name,
-  value,
-  placeholder,
-  type = "text",
-  className,
-  onChange,
-  textarea = false,
-}: Props): JSX.Element => {
+export const TextField = ({ name, value, placeholder, type = "text", className, onChange, textarea = false }: Props): JSX.Element => {
   const params = {
     name,
     placeholder,
     value,
-    onChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
-      onChange(e.target.value, name),
-    className: `flex gap-4 rounded border border-light-48/160 bg-transparent px-4 py-2 text-white placeholder:text-light-48/160 ${className}`,
+    onChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => onChange(e.target.value, name),
+    className: `flex gap-4 rounded border border-light-48/160 bg-transparent px-4 py-2 text-white placeholder:text-light-96/160 autofill:bg-transparent ${className}`,
   };
 
   if (textarea) return <textarea {...params} />;
-  return <input type={type} {...params} />;
+  return <input type={type} {...params}/>;
 };

@@ -9,6 +9,7 @@ module.exports = {
         "light-9/160": "#ffffff09",
         "light-12/160": "#ffffff12",
         "light-48/160": "#ffffff48",
+        "light-96/160": "#ffffff96",
       },
     },
     fontFamily: {

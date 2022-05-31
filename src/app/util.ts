@@ -11,3 +11,11 @@ export const recursiveFilterObjectByKey = (obj: any, key: string) => {
   }
   return output;
 };
+
+/** Conditional style */
+export const cs = (condition: boolean, classes: string, elseClasses: string = "") => {
+  if (condition) return ` ${classes} `;
+  return ` ${elseClasses} `;
+};
+
+export const parseBool = (value: any) => (value ? true : false);

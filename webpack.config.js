@@ -30,7 +30,7 @@ module.exports = {
         use: ["style-loader", "css-loader", "postcss-loader"],
       },
       {
-        test: /\.(png|jpg|jpeg|svg|gif)?$/,
+        test: /\.(png|jpg|jpeg|svg|gif|ico)?$/,
         loader: "file-loader",
         options: {
           outputPath: "assets",

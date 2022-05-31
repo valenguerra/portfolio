@@ -8,10 +8,7 @@ export const useLanguage = (): Language => {
 
   const toggle = () => {
     setSelected(selected === "es" ? "en" : "es");
-    //console.log(selected);
   };
-
-  console.log(texts2);
 
   const selectedTexts = recursiveFilterObjectByKey(texts2, selected);
 

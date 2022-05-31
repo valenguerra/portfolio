@@ -21,41 +21,23 @@ export const ContactMe = (): JSX.Element => {
   const empty: ContactFields = { email: "", fullName: "", message: "" };
   const [fields, setFields] = useState<ContactFields>(empty);
 
-  const onFieldChange = (v: string, n: string) =>
-    setFields({ ...fields, [n]: v });
+  const onFieldChange = (v: string, n: string) => setFields({ ...fields, [n]: v });
+
+  const allFieldsAreValid = fields.email.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/) && fields.fullName.length > 2 && fields.message.length > 8;
 
   return (
     <Card>
       <TitleIcon iconSrc={credentials} title={section5.title} />
-      <div className="flex flex-col items-stretch gap-4">
+      <form action="https://formsubmit.co/700a640f30963340f50aca3b451a482a" method="POST" className="flex flex-col items-stretch gap-4">
         <div className="flex flex-wrap justify-between gap-4">
-          <TextField
-            name="fullName"
-            value={fields.fullName}
-            placeholder={section5.placeholder1}
-            onChange={onFieldChange}
-            className="flex-1"
-          />
-          <TextField
-            name="email"
-            value={fields.email}
-            placeholder={section5.placeholder2}
-            onChange={onFieldChange}
-            className="flex-1"
-          />
+          <TextField name="fullName" value={fields.fullName} placeholder={section5.placeholder1} onChange={onFieldChange} className="flex-1" />
+          <TextField name="email" value={fields.email} placeholder={section5.placeholder2} onChange={onFieldChange} className="flex-1" />
         </div>
-        <TextField
-          name="message"
-          value={fields.message}
-          placeholder={section5.placeholder3}
-          onChange={onFieldChange}
-          textarea
-          className="h-48 resize-none"
-        />
-        <Button className="sm:self-end" primary>
+        <TextField name="message" value={fields.message} placeholder={section5.placeholder3} onChange={onFieldChange} textarea className="h-48 resize-none" />
+        <Button className="sm:self-end" primary submit disabled={!allFieldsAreValid}>
           Enviar <Icon name="arrowRight" color="black" />
         </Button>
-      </div>
+      </form>
     </Card>
   );
 };
