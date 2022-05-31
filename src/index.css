@@ -15,7 +15,7 @@ body {
 }
 
 // Remove Chrome autocomplete styles
-input:-webkit-autofill,
+input:-webkit-autofill, 
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,

@@ -16,7 +16,7 @@ export const TextField = ({ name, value, placeholder, type = "text", className, 
     placeholder,
     value,
     onChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => onChange(e.target.value, name),
-    className: `flex gap-4 rounded border border-light-48/160 bg-transparent px-4 py-2 text-white placeholder:text-light-96/160 autofill:bg-transparent ${className}`,
+    className: `flex gap-4 rounded border border-light-48/160 bg-transparent px-4 py-2 text-white placeholder:text-light-96/160 ${className}`,
   };
 
   if (textarea) return <textarea {...params} />;

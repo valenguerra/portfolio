@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { LanguageContext } from "../../App";
 import { Footer } from "../../components/Footer";
 import { AboutMe } from "./AboutMe";
@@ -11,10 +11,10 @@ import { Skills } from "./Skills";
 export const Home = (): JSX.Element => {
   const language = useContext(LanguageContext);
   const { section1 } = language?.texts;
-
+  
   return (
     <>
-      <div className="flex w-full flex-col items-center gap-24 relative overflow-hidden">
+      <div className="relative flex w-full flex-col items-center gap-24 overflow-hidden">
         <Background />
         <main className="flex w-full max-w-screen-md flex-col items-center justify-center gap-24 px-4 py-6 md:gap-40">
           <div className="flex flex-col items-center justify-center gap-12 md:gap-24">
