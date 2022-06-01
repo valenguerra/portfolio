@@ -21,6 +21,7 @@ import figma from "../../assets/images/figma.png";
 import typescript from "../../assets/images/typescript.png";
 import sass from "../../assets/images/sass.png";
 import flutter from "../../assets/images/flutter.png";
+import vue from "../../assets/images/vue.png";
 import mongodb from "../../assets/images/mongodb.png";
 import graphql from "../../assets/images/graphql.png";
 
@@ -65,6 +66,7 @@ export const Skills = React.forwardRef<HTMLElement, {}>(({}, ref): JSX.Element =
       <Divider />
       <SubtitleLight>{section3.subtitle3}</SubtitleLight>
       <div className="flex flex-wrap gap-4 pb-4">
+        <Item name="Vue" src={vue} />
         <Item name="GraphQL" src={graphql} />
         <Item name="MongoDB" src={mongodb} />
         <Item name="React Native" src={react} />
