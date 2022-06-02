@@ -293,6 +293,10 @@
       "en": "Message",
       "es": "Mensaje"
     },
+    "btn": {
+      "en": "Send",
+      "es": "Enviar"
+    },
     "sent": {
       "subtitle": {
         "en": "Thank you!",

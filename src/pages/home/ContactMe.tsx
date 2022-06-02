@@ -20,7 +20,7 @@ interface ContactFields {
   message: string;
 }
 
-export const ContactMe = React.forwardRef<HTMLElement,  {}>(({}, ref):JSX.Element => {
+export const ContactMe = React.forwardRef<HTMLElement, {}>(({}, ref): JSX.Element => {
   const empty: ContactFields = { email: "", fullName: "", message: "" };
 
   const language = useContext(LanguageContext);
@@ -93,7 +93,7 @@ export const ContactMe = React.forwardRef<HTMLElement,  {}>(({}, ref):JSX.Elemen
             className="h-48 resize-none"
           />
           <Button className="sm:self-end" primary onClick={sendMessage} disabled={!allFieldsAreValid}>
-            Enviar <Icon name="arrowRight" color="black" />
+            {section5.btn} <Icon name="arrowRight" color="black" />
           </Button>
         </form>
       )}

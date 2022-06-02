@@ -16,8 +16,9 @@ import notebook from "../../assets/images/notebook.png";
 import React, { RefObject, useContext } from "react";
 import { LanguageContext } from "../../App";
 import { NOTION_COLLAGE, NOTION_NOTES } from "../../app/consts";
+import { ImageZoom } from "../../components/ImageZoom";
 
-export const AboutMe = React.forwardRef<HTMLElement,  {}>(({}, ref):JSX.Element => {
+export const AboutMe = React.forwardRef<HTMLElement, {}>(({}, ref): JSX.Element => {
   const language = useContext(LanguageContext);
   const { section2 } = language?.texts;
   const { expandable1, expandable2, expandable3 } = section2;
@@ -26,9 +27,13 @@ export const AboutMe = React.forwardRef<HTMLElement,  {}>(({}, ref):JSX.Element 
     <Card ref={ref}>
       <TitleIcon iconSrc={dinosaur} title={section2.title} />
       <div className="flex w-full flex-wrap justify-between gap-8">
-        <img src={about01} alt="Valentino Guerra on a chair" className="h-24 flex-1 rounded object-cover md:h-32" />
-        <img src={about02} alt="Valentino Guerra with a friend" className="h-24 flex-1 rounded object-cover md:h-32" />
-        <img src={about03} alt="Valentino Guerra with friends" className="h-24 flex-1 rounded object-cover md:h-32" />
+        <ImageZoom
+          src={about01}
+          alt="Valentino Guerra on the beach"
+          className="h-24 flex-1 rounded md:h-32"
+        />
+        <ImageZoom src={about02} alt="Valentino Guerra on a mountain" className="h-24 flex-1 rounded md:h-32" />
+        <ImageZoom src={about03} alt="Valentino Guerra with friends" className="h-24 flex-1 rounded md:h-32" />
       </div>
       <div className="flex flex-col gap-4">
         <Paragraph>{section2.ph1}</Paragraph>
