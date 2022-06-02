@@ -265,8 +265,8 @@
         "title": "Valentino Guerra",
         "btn": { "en": "GitHub repository", "es": "Repositorio de GitHub" },
         "ph1": {
-          "en": "Yes, the same web page you are on now. No need to show images of it, I just wanted to tell you how I did it.",
-          "es": "Si, la misma página web en la que estas ahora. De poco serviría mostrar imágenes, simplemente queria contar como la hice."
+          "en": "Yes, the website you are on right now. I just wanted to show how I made it.",
+          "es": "Si, la misma página web en la que estas ahora. De poco serviría mostrar imágenes, simplemente quería contar como la hice."
         },
         "ph2": {
           "en": "First I did the design in Figma, which took me a few days. I love designing interfaces, but it's an exhausting task even if it doesn't look like it.",
