@@ -276,6 +276,18 @@
           "en": "Next, it was time to choose which technologies to program it with. I decided not to use Next.js, but not create-react-app either, since I wanted to have the experience of configuring React myself, using Webpack. I also chose Typescript, I hadn't used it in projects for a long time and I wanted to get back to it. Finally I chose TailwindCSS over StyledComponents, simply because I wanted to try something different. ",
           "es": "Posteriormente, era el momento de elegir con que tecnologías programarla. Me decidí por no utilizar Next.js, pero tampoco create-react-app ya que quería tener la experiencia de configurar React yo mismo, utilizando Webpack. También elegí Typescript, hacía mucho que no lo utilizaba en proyectos y tenía ganas de retomarlo. Por último me quedé con TailwindCSS por sobre StyledComponents, simplemente porque quería probar algo distinto. "
         }
+      },
+      {
+        "title": "Splitnow",
+        "btn": { "en": "GitHub repository", "es": "Repositorio de GitHub" },
+        "ph1": {
+          "en": "This is a small project I made to solve a problem I often have with my friends. It uses an algorithm to calculate how to distribute the money evenly among a group of people based on how much each one spent.",
+          "es": "Es un pequeño proyecto que hice para resolver un problema que suelo tener con mis amigos. Sirve para calcular como repartir el dinero equitativamente entre un grupo de persona en base a cuánto gastó cada uno."
+        },
+        "ph2": {
+          "en": "Disigned on Figma, developed with React (create-react-app), Typescript and TailwindCSS. You can take a look at it from ",
+          "es": "Diseñado en Figma, desarrollado con React (create-react-app), Typescript y TailwindCSS. Puedes visitarlo entrando a "
+        }
       }
     ]
   },

@@ -19,7 +19,16 @@ import students1 from "../../../assets/images/screenshots/students_1.png";
 import students2 from "../../../assets/images/screenshots/students_2.png";
 import phSeller1 from "../../../assets/images/screenshots/ph_seller_1.png";
 import phSeller2 from "../../../assets/images/screenshots/ph_seller_2.png";
-import { ENIGMATH, GITHUB_PARTNER, PHOTOGRAPHY_SELLER, SOCIOS_AOM, VALENTINO_GUERRA, WEB_AOM } from "../../../app/consts";
+import {
+  ENIGMATH,
+  GITHUB_PARTNER,
+  PHOTOGRAPHY_SELLER,
+  SOCIOS_AOM,
+  SPLITNOW,
+  SPLITNOW_GITHUB,
+  VALENTINO_GUERRA,
+  WEB_AOM,
+} from "../../../app/consts";
 
 const MobileGames = (): JSX.Element => {
   const language = useContext(LanguageContext);
@@ -169,4 +178,32 @@ const ValentinoGuerra = (): JSX.Element => {
   );
 };
 
-export const projects = [<MobileGames />, <Enigmath />, <SociosAOM />, <WebAOM />, <StudentsAssociation />, <PhotographySeller />, <ValentinoGuerra />];
+const Splitnow = (): JSX.Element => {
+  const language = useContext(LanguageContext);
+  const { section4 } = language?.texts;
+  const { title, ph1, ph2, btn } = section4.list[7];
+
+  return (
+    <>
+      <Title>{title}</Title>
+      <div>
+        <Link to={SPLITNOW_GITHUB}>{btn}</Link>
+      </div>
+      <Paragraph>{ph1}</Paragraph>
+      <Paragraph>
+        {ph2} <Link to={SPLITNOW}>splitnow.app</Link>
+      </Paragraph>
+    </>
+  );
+};
+
+export const projects = [
+  <MobileGames />,
+  <Enigmath />,
+  <SociosAOM />,
+  <WebAOM />,
+  <StudentsAssociation />,
+  <PhotographySeller />,
+  <ValentinoGuerra />,
+  <Splitnow />,
+];

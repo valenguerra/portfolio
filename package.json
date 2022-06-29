@@ -1,5 +1,5 @@
 {
-  "name": "react-webpack-template",
+  "name": "valenguerra",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,7 +10,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages --dotfiles -d dist"
   },
-  "author": "",
+  "author": "Valentino Guerra",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.27.2",

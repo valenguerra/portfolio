@@ -11,6 +11,8 @@ export const SOCIOS_AOM = "https://play.google.com/store/apps/details?id=com.Cos
 export const WEB_AOM = "https://aom.org.ar/";
 export const PHOTOGRAPHY_SELLER = "https://github.com/valenguerra/PhotographySeller";
 export const VALENTINO_GUERRA = "https://github.com/valenguerra/valenguerra";
+export const SPLITNOW = "https://splitnow.app";
+export const SPLITNOW_GITHUB = "https://github.com/valenguerra/splitnow";
 
 // Others
 export const GOOGLE_MAPS = "https://www.google.com/maps/place/Mar+del+Plata";
