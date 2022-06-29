@@ -19,6 +19,8 @@ import students1 from "../../../assets/images/screenshots/students_1.png";
 import students2 from "../../../assets/images/screenshots/students_2.png";
 import phSeller1 from "../../../assets/images/screenshots/ph_seller_1.png";
 import phSeller2 from "../../../assets/images/screenshots/ph_seller_2.png";
+import splitnow from "../../../assets/images/screenshots/splitnow.jpeg";
+
 import {
   ENIGMATH,
   GITHUB_PARTNER,
@@ -186,6 +188,7 @@ const Splitnow = (): JSX.Element => {
   return (
     <>
       <Title>{title}</Title>
+      <img src={splitnow} alt="splitnow" className="w-full rounded" />
       <div>
         <Link to={SPLITNOW_GITHUB}>{btn}</Link>
       </div>
