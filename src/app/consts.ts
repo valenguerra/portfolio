@@ -20,4 +20,4 @@ export const GITHUB_PARTNER = "https://github.com/mirandaink01";
 export const NOTION_NOTES = "https://valentinoguerra.notion.site/Notas-0fc9b64f2628415784c174f01b6783d7";
 export const NOTION_COLLAGE = "https://valentinoguerra.notion.site/Porqu-dej-la-universidad-b03041534924400598248ac9f437b7f4";
 export const EMAIL_REGEX = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-//export const GA_TRACK_ID = process.env.GA_TRACK_ID;
+export const GA_TRACK_ID = "G-6T3HSG65M0";
