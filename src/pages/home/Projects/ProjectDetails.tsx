@@ -2,7 +2,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Icon } from "../../../components/Icon";
 import { Link } from "../../../components/Link";
-import { Paragraph, Subtitle } from "../../../components/Text";
+import { Subtitle } from "../../../components/Text";
 import { Project } from "../../../types";
 import { ImageRow } from "./ImageRow";
 

@@ -1,6 +1,6 @@
 import { Card } from "../../../components/Card";
 import { TitleIcon } from "../../../components/TitleIcon";
-import React, { useContext, useEffect, useMemo, useRef, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Divider } from "../../../components/Divider";
 
 import briefcase from "../../../assets/images/briefcase.png";
@@ -13,7 +13,6 @@ export const Projects = React.forwardRef<HTMLElement, {}>(({}, ref): JSX.Element
   const [selected, setSelected] = useState<number | null>(null);
   const projects = useProjects();
   const language = useContext(LanguageContext);
-  const positionRef = useRef<HTMLDivElement>(null);
 
   const { section4 } = language?.texts;
 

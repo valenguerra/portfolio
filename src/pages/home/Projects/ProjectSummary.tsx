@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { useState } from "react";
 import { Frame } from "../../../components/Frame";
 import { Paragraph, Subtitle } from "../../../components/Text";
@@ -20,9 +21,10 @@ export const ProjectSummary = ({ project, onClick }: Props) => {
       onLeaveHover={() => setHover(false)}
     >
       <div
-        className={`absolute inset-0 flex items-center justify-center gap-4 bg-black bg-opacity-80 transition duration-300 ${
+        className={clsx(
+          "absolute inset-0 flex items-center justify-center gap-4 bg-black bg-opacity-80 transition duration-300",
           hover ? "opacity-100" : "opacity-0"
-        }`}
+        )}
       >
         {techStack.map((item, i) => (
           <img key={i} src={item} alt="stack" className="h-8 w-8" />

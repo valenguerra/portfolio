@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { ImageProps } from "../types";
 
 interface Props extends ImageProps {
@@ -7,7 +8,7 @@ interface Props extends ImageProps {
 
 export const ImageZoom = ({ src, alt, className, offset }: Props): JSX.Element => {
   return (
-    <div className={`overflow-hidden ${className}`}>
+    <div className={clsx("overflow-hidden", className)}>
       <img
         src={src}
         alt={alt}

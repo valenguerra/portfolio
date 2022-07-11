@@ -13,7 +13,7 @@ import dinosaur from "../../assets/images/dinosaur.png";
 import reading from "../../assets/images/reading.png";
 import checkCalendar from "../../assets/images/check_calendar.png";
 import notebook from "../../assets/images/notebook.png";
-import React, { RefObject, useContext } from "react";
+import React, { useContext } from "react";
 import { LanguageContext } from "../../App";
 import { NOTION_COLLAGE, NOTION_NOTES } from "../../app/consts";
 import { ImageZoom } from "../../components/ImageZoom";
@@ -27,11 +27,7 @@ export const AboutMe = React.forwardRef<HTMLElement, {}>(({}, ref): JSX.Element 
     <Card ref={ref}>
       <TitleIcon iconSrc={dinosaur} title={section2.title} />
       <div className="flex w-full flex-wrap justify-between gap-8">
-        <ImageZoom
-          src={about01}
-          alt="Valentino Guerra on the beach"
-          className="h-24 flex-1 rounded md:h-32"
-        />
+        <ImageZoom src={about01} alt="Valentino Guerra on the beach" className="h-24 flex-1 rounded md:h-32" />
         <ImageZoom src={about02} alt="Valentino Guerra on a mountain" className="h-24 flex-1 rounded md:h-32" />
         <ImageZoom src={about03} alt="Valentino Guerra with friends" className="h-24 flex-1 rounded md:h-32" />
       </div>

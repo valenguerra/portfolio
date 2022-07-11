@@ -14,8 +14,8 @@ body {
   background-color: black;
 }
 
-// Remove Chrome autocomplete styles
-input:-webkit-autofill, 
+/* Remove Chrome autocomplete styles */
+input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,

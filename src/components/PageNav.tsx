@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { Icon } from "./Icon";
 
 interface Props {
@@ -8,18 +9,12 @@ interface Props {
   className?: string;
 }
 
-export const PageNav = ({
-  currentPage,
-  total,
-  goToNext,
-  goToPrevious,
-  className,
-}: Props): JSX.Element => {
+export const PageNav = ({ currentPage, total, goToNext, goToPrevious, className }: Props): JSX.Element => {
   const previousIsDisabled = currentPage === 1;
   const nextIsDisabled = currentPage === total;
 
   return (
-    <div className={"alignItems flex gap-3" + " " + className}>
+    <div className={clsx("alignItems flex gap-3", className)}>
       <Icon
         name="arrowLeft"
         onClick={previousIsDisabled ? undefined : goToPrevious}
@@ -28,11 +23,7 @@ export const PageNav = ({
       <span className="flex w-10 select-none justify-center text-white">
         {currentPage} / {total}
       </span>
-      <Icon
-        name="arrowRight"
-        onClick={nextIsDisabled ? undefined : goToNext}
-        className={nextIsDisabled ? "opacity-50" : ""}
-      />
+      <Icon name="arrowRight" onClick={nextIsDisabled ? undefined : goToNext} className={clsx(nextIsDisabled && "opacity-50")} />
     </div>
   );
 };

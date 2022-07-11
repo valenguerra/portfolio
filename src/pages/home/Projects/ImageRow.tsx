@@ -9,7 +9,7 @@ export const ImageRow = ({ images }: ImageRowProps): JSX.Element => {
     <div className="flex w-full justify-evenly gap-4">
       {images.map(({ src, alt }, i) => (
         <div key={i} className="flex-1">
-          <img src={src} alt={alt} className={` w-full rounded`} />
+          <img src={src} alt={alt} className="w-full rounded" />
         </div>
       ))}
     </div>
