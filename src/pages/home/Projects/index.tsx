@@ -19,13 +19,8 @@ export const Projects = React.forwardRef<HTMLElement, {}>(({}, ref): JSX.Element
 
   const closeProject = () => setSelected(null);
 
-  useEffect(() => {
-    positionRef.current?.scrollIntoView();
-  }, [selected]);
-
   return (
     <Card ref={ref} className="relative">
-      <div ref={positionRef} className="absolute" style={{ top: -100 }} />
       <div className="flex items-center justify-between">
         <TitleIcon title={section4.title} iconSrc={briefcase} />
       </div>
