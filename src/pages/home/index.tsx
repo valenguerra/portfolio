@@ -1,5 +1,6 @@
 import { useContext, useEffect, useRef } from "react";
 import { LanguageContext } from "../../App";
+import { BackToTop } from "../../components/BackToTop";
 import { Footer } from "../../components/Footer";
 import { AboutMe } from "./AboutMe";
 import { Background } from "./Background";
@@ -18,7 +19,7 @@ export const Home = (): JSX.Element => {
 
   return (
     <>
-      <div className="relative flex w-full flex-col items-center gap-24 overflow-hidden">
+      <div className="relative flex w-full flex-col items-center gap-12 overflow-hidden pb-32">
         <Background />
         <main className="flex w-full max-w-screen-md flex-col items-center justify-center gap-24 px-4 py-6 md:gap-40">
           <div className="flex flex-col items-center justify-center gap-12 md:gap-24">
@@ -37,6 +38,7 @@ export const Home = (): JSX.Element => {
         </main>
         <Footer />
       </div>
+      <BackToTop />
     </>
   );
 };
