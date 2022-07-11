@@ -1,4 +1,4 @@
-import { FiChevronRight, FiChevronLeft, FiChevronDown } from "react-icons/fi";
+import { FiChevronRight, FiChevronLeft, FiChevronDown, FiArrowLeft } from "react-icons/fi";
 import { AiOutlineGithub, AiOutlineInstagram } from "react-icons/ai";
 import { ImFileEmpty } from "react-icons/im";
 import { IoLogoLinkedin } from "react-icons/io";
@@ -30,6 +30,7 @@ export const Icon = ({ name, color = "white", className, onClick }: IconProps) =
 
   if (name === "arrowRight") return <FiChevronRight {...props} />;
   if (name === "arrowLeft") return <FiChevronLeft {...props} />;
+  if (name === "longArrowLeft") return <FiArrowLeft {...props} />;
   if (name === "arrowDown") return <FiChevronDown {...props} />;
   if (name === "github") return <AiOutlineGithub {...props} />;
   if (name === "linkedIn") return <IoLogoLinkedin {...props} />;

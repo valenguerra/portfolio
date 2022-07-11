@@ -1,4 +1,3 @@
-
 module.exports = {
   content: ["./src/**/*.html", "./src/**/*.ts", "./src/**/*.tsx"],
   darkMode: "media",
@@ -16,5 +15,5 @@ module.exports = {
       main: ["Jost", "sans-serif"],
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/line-clamp")],
 };

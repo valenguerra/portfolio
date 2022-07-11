@@ -30,19 +30,21 @@ export const Skills = React.forwardRef<HTMLElement, {}>(({}, ref): JSX.Element =
   const { section3 } = language?.texts;
 
   const Item = ({ name, src }: { name: string; src: string }) => (
-    <Frame>
+    <div className="flex gap-2 text-white">
       <ColoredIcon src={src} alt={name} />
       {name}
-    </Frame>
+    </div>
   );
 
   const SubtitleLight = ({ children }: { children: string }) => <span className="text-lg font-light text-white">{children}</span>;
+
+  const ItemGroup = ({ children }: { children: React.ReactNode }) => <div className="flex flex-wrap gap-6">{children}</div>;
 
   return (
     <Card ref={ref}>
       <TitleIcon iconSrc={chessHorse} title={section3.title} />
       <SubtitleLight>{section3.subtitle1}</SubtitleLight>
-      <div className="flex flex-wrap gap-4">
+      <ItemGroup>
         <Item name="HTML" src={html} />
         <Item name="CSS" src={css} />
         <Item name="Javascript" src={javascript} />
@@ -55,22 +57,22 @@ export const Skills = React.forwardRef<HTMLElement, {}>(({}, ref): JSX.Element =
         <Item name="TailwindCSS" src={tailwind} />
         <Item name="Figma" src={figma} />
         <Item name="Typescript" src={typescript} />
-      </div>
+      </ItemGroup>
       <Divider />
       <SubtitleLight>{section3.subtitle2}</SubtitleLight>
-      <div className="flex flex-wrap gap-4">
+      <ItemGroup>
         <Item name="Sass" src={sass} />
         <Item name="MongoDB" src={mongodb} />
         <Item name="Flutter" src={flutter} />
-      </div>
+      </ItemGroup>
       <Divider />
       <SubtitleLight>{section3.subtitle3}</SubtitleLight>
-      <div className="flex flex-wrap gap-4 pb-4">
+      <ItemGroup>
         <Item name="Vue" src={vue} />
         <Item name="GraphQL" src={graphql} />
         <Item name="MongoDB" src={mongodb} />
         <Item name="React Native" src={react} />
-      </div>
+      </ItemGroup>
     </Card>
   );
 });

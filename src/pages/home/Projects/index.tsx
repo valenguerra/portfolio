@@ -1,50 +1,36 @@
 import { Card } from "../../../components/Card";
 import { TitleIcon } from "../../../components/TitleIcon";
-import React, { RefObject, useContext, useState } from "react";
-import { PageNav } from "../../../components/PageNav";
+import React, { useContext, useState } from "react";
 import { Divider } from "../../../components/Divider";
-import { projects } from "./projects";
 
 import briefcase from "../../../assets/images/briefcase.png";
 import { LanguageContext } from "../../../App";
+import { ProjectSummary } from "./ProjectSummary";
+import { useProjects } from "../../../hooks/useProjects";
+import { ProjectDetails } from "./ProjectDetails";
 
 export const Projects = React.forwardRef<HTMLElement, {}>(({}, ref): JSX.Element => {
+  const [selected, setSelected] = useState<number | null>(null);
+  const projects = useProjects();
   const language = useContext(LanguageContext);
   const { section4 } = language?.texts;
-  const [currentProject, setCurrentProject] = useState<number>(0);
 
-  const goToNextProject = () => {
-    if (currentProject >= projects.length - 1) return;
-    setCurrentProject(currentProject + 1);
-  };
-
-  const goToPreviousProject = () => {
-    if (currentProject === 0) return;
-    setCurrentProject(currentProject - 1);
-  };
+  const closeProject = () => setSelected(null);
 
   return (
     <Card ref={ref}>
       <div className="flex items-center justify-between">
         <TitleIcon title={section4.title} iconSrc={briefcase} />
-        <PageNav
-          className="hidden sm:flex"
-          currentPage={currentProject + 1}
-          total={projects.length}
-          goToNext={goToNextProject}
-          goToPrevious={goToPreviousProject}
-        />
       </div>
       <Divider />
-      {projects[currentProject]}
-      <div className="flex justify-center sm:hidden">
-        <PageNav
-          currentPage={currentProject + 1}
-          total={projects.length}
-          goToNext={goToNextProject}
-          goToPrevious={goToPreviousProject}
-        />
-      </div>
+      {selected ? (
+        <ProjectDetails project={projects[selected]} onClose={closeProject} />
+      ) : (
+        projects.map((project) => {
+          const onClick = () => setSelected(project.id);
+          return <ProjectSummary project={project} key={project.id} onClick={onClick} />;
+        })
+      )}
     </Card>
   );
 });

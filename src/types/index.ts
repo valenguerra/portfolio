@@ -11,3 +11,13 @@ export interface ImageProps {
 }
 
 export type FormStatus = "normal" | "sending" | "sent";
+
+export interface Project {
+  id: number;
+  title: string;
+  thumbnail: string;
+  description: string;
+  techStack: string[];
+  year: number;
+  images?: string[];
+}
