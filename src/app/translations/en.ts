@@ -1,5 +1,12 @@
 import { SOCIOS_AOM, WEB_AOM, PHOTOGRAPHY_SELLER, VALENTINO_GUERRA, SPLITNOW_GITHUB, SPLITNOW } from "../consts";
 
+/*
+  Markdown
+
+  - Links: {url}/#{name} => https://google.com/#{Google}
+  - Line break: $$
+*/
+
 export const en = {
   section1: {
     btn: "Cambiar a español",
@@ -72,38 +79,28 @@ export const en = {
       },
       2: {
         title: "Socios AOM",
-        description: `Mi último proyecto en forma de app móvil. Es una herramienta para la Asociación de Odontólogos de Mar del Plata y todos sus clientes.
-        
-        El resultado final es de una excelente calidad, ya que nos enfocamos en hacer algo simple pero al mismo tiempo estar presentes en todos los detalles y no dejar nada sin revisar. (Se encuentra en Google Play)[${SOCIOS_AOM}] y en App Store de forma privada.`,
+        description: `Mi último proyecto en forma de app móvil. Es una herramienta para la Asociación de Odontólogos de Mar del Plata y todos sus clientes. $$ El resultado final es de una excelente calidad, ya que nos enfocamos en hacer algo simple pero al mismo tiempo estar presentes en todos los detalles y no dejar nada sin revisar. ${SOCIOS_AOM}/#Se-encuentra-en-Google-Play y en App Store de forma privada.`,
       },
 
       3: {
         title: "Web AOM",
-        description: `Una de las primeros sitios web que desarrollamos, también para la Asociación de Odontólogos de Mar del Plata. (aom.org.ar)[${WEB_AOM}]`,
+        description: `Uno de las primeros sitios web que desarrollamos, también para la Asociación de Odontólogos de Mar del Plata. ${WEB_AOM}/#aom.org.ar`,
       },
       4: {
         title: "Venta de fotografías",
-        description: `Sitio web de tipo e-commerce pero muy simplificado. Esta orientado a la venta de fotografías, pero podría usarse para vender cualquier otro tipo de productos.
-        
-        Hecho con React y Next.js, me sirvió para entender a fondo el uso del server-side rendering que ofrece Next.js. El sitio web no está en funcionamiento actualmente pero puedes visitar el (repositorio de GitHub)[${PHOTOGRAPHY_SELLER}] ya que es público.`,
+        description: `Sitio web de tipo e-commerce pero muy simplificado. Esta orientado a la venta de fotografías, pero podría usarse para vender cualquier otro tipo de productos. $$ Hecho con React y Next.js, me sirvió para entender a fondo el uso del server-side rendering que ofrece Next.js. El sitio web no está en funcionamiento actualmente pero puedes visitar el ${PHOTOGRAPHY_SELLER}/#repositorio-de-GitHub ya que es público.`,
       },
       5: {
         title: "Centro de estudiantes",
-        description: `Sitio web para el centro de estudiantes de una universidad local. Fue un trabajo pequeño, pero todo suma a la experiencia.
-        
-        Hecho con React (create-react-app). Si bien no aprendimos nada nuevo al desarrollar este sitio, nos sirvió para solidificar nuestro entendimiento de React y dar estilo con StyledComponents.`,
+        description: `Sitio web para el centro de estudiantes de una universidad local. Fue un trabajo pequeño, pero todo suma a la experiencia. $$ Hecho con React (create-react-app). Si bien no aprendimos nada nuevo al desarrollar este sitio, nos sirvió para solidificar nuestro entendimiento de React y dar estilo con StyledComponents.`,
       },
       6: {
         title: "Valentino Guerra",
-        description: `Lo primero fue diseñar la interfaz, para lo cual usé Figma. Me encanta diseñar interfaces, pero es una tarea agotadora aunque no lo parezca.
-        
-        Posteriormente, era el momento de elegir con que tecnologías programarla. Me decidí por no utilizar Next.js, pero tampoco create-react-app ya que quería tener la experiencia de configurar React yo mismo, utilizando Webpack. También elegí Typescript, hacía mucho que no lo utilizaba en proyectos y tenía ganas de retomarlo. Por último me quedé con TailwindCSS por sobre StyledComponents, simplemente porque quería probar algo distinto. (Repositorio de GitHub)[${VALENTINO_GUERRA}]`,
+        description: `Lo primero fue diseñar la interfaz, para lo cual usé Figma. Me encanta diseñar interfaces, pero es una tarea agotadora aunque no lo parezca. $$ Posteriormente, era el momento de elegir con que tecnologías programarla. Me decidí por no utilizar Next.js, pero tampoco create-react-app ya que quería tener la experiencia de configurar React yo mismo, utilizando Webpack. También elegí Typescript, hacía mucho que no lo utilizaba en proyectos y tenía ganas de retomarlo. Por último me quedé con TailwindCSS por sobre StyledComponents, simplemente porque quería probar algo distinto. ${VALENTINO_GUERRA}/#Repositorio-de-GitHub`,
       },
       7: {
         title: "Splitnow",
-        description: `Es un pequeño proyecto que hice para resolver un problema que suelo tener con mis amigos. Sirve para calcular como repartir el dinero equitativamente entre un grupo de persona en base a cuánto gastó cada uno.
-        
-        Diseñado en Figma, desarrollado con React (create-react-app), Typescript y TailwindCSS. Puedes visitarlo entrando a (splitnow.app)[${SPLITNOW}], también puedes ver el (repositorio de GitHub)[${SPLITNOW_GITHUB}]`,
+        description: `Es un pequeño proyecto que hice para resolver un problema que suelo tener con mis amigos. Sirve para calcular como repartir el dinero equitativamente entre un grupo de persona en base a cuánto gastó cada uno. $$ Diseñado en Figma, desarrollado con React (create-react-app), Typescript y TailwindCSS. Puedes visitarlo entrando a ${SPLITNOW}/#splitnow.app, también puedes ver el ${SPLITNOW_GITHUB}/#repositorio-de-GitHub`,
       },
     },
   },

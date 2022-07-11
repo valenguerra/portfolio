@@ -24,8 +24,8 @@ export const ProjectSummary = ({ project, onClick }: Props) => {
           hover ? "opacity-100" : "opacity-0"
         }`}
       >
-        {techStack.map((item) => (
-          <img src={item} alt="stack" className="h-8 w-8" />
+        {techStack.map((item, i) => (
+          <img key={i} src={item} alt="stack" className="h-8 w-8" />
         ))}
       </div>
       <img src={thumbnail} alt={title} className="h-20 w-20 rounded-l" />

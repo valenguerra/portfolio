@@ -112,6 +112,6 @@ export const useProjects = (): Project[] => {
 
   return projects.map((project) => {
     const { title, description } = section4.projects[project.id];
-    return { ...project, title, description };
+    return { ...project, title, description: description.replace(/\$\$/g, "  \n&nbsp;  \n  ") };
   });
 };
