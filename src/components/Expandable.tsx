@@ -19,7 +19,7 @@ export const Expandable = ({ title, children }: Props): JSX.Element => {
       >
         {title} <Icon name="arrowDown" className={clsx("transition duration-300", isOpen && "rotate-180")} />
       </div>
-      {isOpen && children}
+      {isOpen && <div className="flex-1 px-3">{children}</div>}
     </div>
   );
 };
