@@ -4,7 +4,7 @@ import { Footer } from "../../components/Footer";
 import { AboutMe } from "./AboutMe";
 import { Background } from "./Background";
 import { ContactMe } from "./ContactMe";
-import { MainSection } from "./MainSection";
+import { Hero } from "./Hero";
 import { Projects } from "./Projects";
 import { Skills } from "./Skills";
 
@@ -28,7 +28,7 @@ export const Home = (): JSX.Element => {
             >
               {section1.btn}
             </span>
-            <MainSection {...{ aboutMeRef, skillsRef, projectsRef, contactMeRef }} />
+            <Hero {...{ aboutMeRef, skillsRef, projectsRef, contactMeRef }} />
           </div>
           <AboutMe ref={aboutMeRef} />
           <Skills ref={skillsRef} />

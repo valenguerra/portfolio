@@ -7,7 +7,7 @@ interface Props extends ImageProps {
 
 export const ImageZoom = ({ src, alt, className, offset }: Props): JSX.Element => {
   return (
-    <div className={`overflow-hidden first-line:${className}`}>
+    <div className={`overflow-hidden ${className}`}>
       <img
         src={src}
         alt={alt}

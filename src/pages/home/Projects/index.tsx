@@ -11,7 +11,6 @@ import { ProjectDetails } from "./ProjectDetails";
 
 export const Projects = React.forwardRef<HTMLElement, {}>(({}, ref): JSX.Element => {
   const [selected, setSelected] = useState<number | null>(null);
-  const [position, setPosition] = useState<number | null>(null);
   const projects = useProjects();
   const language = useContext(LanguageContext);
   const positionRef = useRef<HTMLDivElement>(null);
@@ -21,17 +20,12 @@ export const Projects = React.forwardRef<HTMLElement, {}>(({}, ref): JSX.Element
   const closeProject = () => setSelected(null);
 
   useEffect(() => {
-    const elementPosition = positionRef.current?.getBoundingClientRect().top ?? 0;
-    setPosition(elementPosition);
-  }, []);
-
-  useEffect(() => {
-    if (position) window.scrollTo({ top: position });
+    positionRef.current?.scrollIntoView();
   }, [selected]);
 
   return (
     <Card ref={ref} className="relative">
-      <div ref={positionRef} className="absolute top-0" />
+      <div ref={positionRef} className="absolute" style={{ top: -100 }} />
       <div className="flex items-center justify-between">
         <TitleIcon title={section4.title} iconSrc={briefcase} />
       </div>

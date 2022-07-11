@@ -19,7 +19,7 @@ interface Props {
   contactMeRef: RefObject<HTMLElement>;
 }
 
-export const MainSection = ({ aboutMeRef, contactMeRef, projectsRef, skillsRef }: Props): JSX.Element => {
+export const Hero = ({ aboutMeRef, contactMeRef, projectsRef, skillsRef }: Props): JSX.Element => {
   const language = useContext(LanguageContext);
   const { section1 } = language?.texts;
 
