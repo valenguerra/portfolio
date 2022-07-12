@@ -6,8 +6,8 @@ export const GITHUB = "https://github.com/valenguerra";
 export const LINKEDIN = "https://www.linkedin.com/in/valentino-guerra-21676823a/";
 
 // Projects
-export const ENIGMATH = "https://play.google.com/store/apps/details?id=com.Cosmik.Enigmath&hl=en&gl=US";
-export const SOCIOS_AOM = "https://play.google.com/store/apps/details?id=com.Cosmik.SociosAOM&hl=en&gl=US";
+export const ENIGMATH = "https://play.google.com/store/apps/details?id=com.Cosmik.Enigmath";
+export const SOCIOS_AOM = "https://play.google.com/store/apps/details?id=com.Cosmik.SociosAOM";
 export const WEB_AOM = "https://aom.org.ar/";
 export const PHOTOGRAPHY_SELLER = "https://github.com/valenguerra/PhotographySeller";
 export const VALENTINO_GUERRA = "https://github.com/valenguerra/valenguerra";

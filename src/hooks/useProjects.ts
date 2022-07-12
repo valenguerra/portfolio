@@ -47,6 +47,8 @@ import typescript from "../assets/images/typescript.png";
 import sass from "../assets/images/sass.png";
 import flutter from "../assets/images/flutter.png";
 import mongodb from "../assets/images/mongodb.png";
+import unity from "../assets/images/unity.png";
+import cSharp from "../assets/images/c_sharp.png";
 
 export const useProjects = (): Project[] => {
   const language = useContext(LanguageContext);
@@ -58,14 +60,14 @@ export const useProjects = (): Project[] => {
       thumbnail: mobileGamesThumbnail,
       images: [ball, blackBullets, blockRain, newtonsApple],
       year: 2018,
-      techStack: [html, css],
+      techStack: [unity, cSharp],
     },
     {
       id: 1,
       thumbnail: enigmathThumbnail,
       images: [enigmath1, enigmath2, enigmath3],
       year: 2019,
-      techStack: [html, css],
+      techStack: [unity, cSharp],
     },
     {
       id: 2,

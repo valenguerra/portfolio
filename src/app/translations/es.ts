@@ -1,4 +1,4 @@
-import { SOCIOS_AOM, WEB_AOM, PHOTOGRAPHY_SELLER, VALENTINO_GUERRA, SPLITNOW_GITHUB, SPLITNOW } from "../consts";
+import { SOCIOS_AOM, WEB_AOM, PHOTOGRAPHY_SELLER, VALENTINO_GUERRA, SPLITNOW_GITHUB, SPLITNOW, ENIGMATH } from "../consts";
 
 export const es = {
   hero: {
@@ -60,39 +60,39 @@ export const es = {
     subtitle3: "Quiero aprender/profundizar en un futuro próximo",
   },
   projects: {
-    title: "Projects",
+    title: "Proyectos",
     projects: {
       0: {
-        title: "Mobile games",
-        description: `En mis inicios con la programación, allá por el 2017, mientras aún iba a la escuela secundaria, tenía una fascinación por las aplicaciones móviles. Mi objetivo era volverme millonario haciendo un aplicación o un juego exitoso, pero era innegable que también disfrutaba mucho del proceso de crear algo nuevo. Poner en existencia y al alcance de todos, algo que previamente solo existía en mi cerebro, era la mejor parte. Durante un par de años, me dedique principalmente a desarrollar aplicaciones, muchas de ellas juegos. Considero que crear juegos es la manera más divertida de aprender a programar. Ya que involucra diseño, planeación, resolución de problemas y trabajo en equipo. Habilidades fundamentales para desarrollar cualquier cosa.`,
+        title: "Juegos para celular",
+        description: `Una serie de pequeños juegos para Android, en su mayoría basados en físicas. Muy simples pero a su vez muy divertidos$$En mis inicios con la programación, allá por el 2017-2018, mientras aún iba a la escuela secundaria, tenía una fascinación por las aplicaciones móviles. Mi objetivo era volverme millonario haciendo un aplicación o un juego exitoso, pero era innegable que también disfrutaba del proceso de crear algo nuevo.$$Durante un tiempo, usé mi tiempo libre para crear aplicaciones móviles, sobre todo juegos. Considero que crear juegos es la manera más divertida de aprender a programar, ya que involucra diseño, planificación, resolución de problemas y trabajo en equipo. Habilidades fundamentales para desarrollar cualquier cosa.`,
       },
       1: {
         title: "Enigmath: ¿Puedes resolverlos todos?",
-        description: `Mi etapa de creación de juegos concluye con Enigmath. Un juego que desarrollé junto con mi compañero Iñaki Miranda, con quien desarrollé muchos de los siguientes proyectos. Después de muchos intentos fallidos de intentar hacer juegos demasiado ambiciosos, nos dimos cuenta que había que empezar por algo más simple, pero tomándonos el tiempo necesario para cada una de las 3 etapas del proceso. Planeación completa, diseño de las interfaces, y programación. Un juego de acertijos matemáticos en el cual debes descubrir el patrón para pasar al siguiente nivel. Puedes descargarlo desde Google Play`,
+        description: `Un divertido juego para Android en el que debes resolver acertijos matemáticos y lograr reconocer los patrones para poder avanzar de nivel.$$Desarrollado junto a mi compañero Iñaki Miranda, con quien desarrollé muchos de los siguientes proyectos.$$Despues de muchos intentos fallidos de intentar hacer juegos demasiado ambiciosos, nos dimos cuenta que era mejor empezar por algo simple, pero tomandonos el tiempo necesario para hacerlo a la perfección.$$El juego está actualmente ${ENIGMATH}#disponible-en-Google-Play.`,
       },
       2: {
         title: "Socios AOM",
-        description: `Mi último proyecto en forma de app móvil. Es una herramienta para la Asociación de Odontólogos de Mar del Plata y todos sus clientes. $$ El resultado final es de una excelente calidad, ya que nos enfocamos en hacer algo simple pero al mismo tiempo estar presentes en todos los detalles y no dejar nada sin revisar. ${SOCIOS_AOM}/#Se-encuentra-en-Google-Play y en App Store de forma privada.`,
+        description: `Una aplicación móvil diseñada como una herramienta con múltiples funciones para todos los odontólogos asociados a AOM (Asociación Odontológica Marplatense)$$El resultado finales es de excelente calidad, ya que nos enfocamos en mantenerlo simple pero al mismo tiempo estando presentes en todos los detalles y no dejar nada sin revisar. ${SOCIOS_AOM}#Se-encuentra-en-Google-Play y en App Store de forma privada.`,
       },
       3: {
         title: "Web AOM",
-        description: `Uno de las primeros sitios web que desarrollamos, también para la Asociación de Odontólogos de Mar del Plata. ${WEB_AOM}/#aom.org.ar`,
+        description: `Un sitio web para la Asociación Odontológica Marplatense, cuenta con una parte pública que puedes visitar, y una parte de uso exclusivo para asociados.$$Fue un gran desafío, ya que era un trabajo que involucraba frontend y backend, integrado con una base de datos pre-existente. Visita ${WEB_AOM}#aom.org.ar.`,
       },
       4: {
         title: "Venta de fotografías",
-        description: `Sitio web de tipo e-commerce pero muy simplificado. Esta orientado a la venta de fotografías, pero podría usarse para vender cualquier otro tipo de productos. $$ Hecho con React y Next.js, me sirvió para entender a fondo el uso del server-side rendering que ofrece Next.js. El sitio web no está en funcionamiento actualmente pero puedes visitar el ${PHOTOGRAPHY_SELLER}/#repositorio-de-GitHub ya que es público.`,
+        description: `Un sitio web pensado para conectar un vendedor de fotografías enmarcadas con sus clientes, mostrando todos los productos disponibles y sus precios.$$El backend de este sitio fue hecho mediante Strapi, un conocido "headless CMS" que ofrece una forma rápida y sencilla para crear una API. ${PHOTOGRAPHY_SELLER}#Repositorio-de-GitHub.`,
       },
       5: {
         title: "Centro de estudiantes",
-        description: `Sitio web para el centro de estudiantes de una universidad local. Fue un trabajo pequeño, pero todo suma a la experiencia. $$ Hecho con React (create-react-app). Si bien no aprendimos nada nuevo al desarrollar este sitio, nos sirvió para solidificar nuestro entendimiento de React y dar estilo con StyledComponents.`,
+        description: `Un sitio web para el centro de estudiantes de una universidad local, destaca por su minimalismo y su función para buscar archivos de material educativo a traves de un buscador y un navegador de carpetas.$$Si bien fue un proyecto pequeño, en este caso el reto fue integrar la API de Azure de OneDrive para poder obtener los archivos necesarios de forma dinámica.`,
       },
       6: {
         title: "Valentino Guerra",
-        description: `Lo primero fue diseñar la interfaz, para lo cual usé Figma. Me encanta diseñar interfaces, pero es una tarea agotadora aunque no lo parezca. $$ Posteriormente, era el momento de elegir con que tecnologías programarla. Me decidí por no utilizar Next.js, pero tampoco create-react-app ya que quería tener la experiencia de configurar React yo mismo, utilizando Webpack. También elegí Typescript, hacía mucho que no lo utilizaba en proyectos y tenía ganas de retomarlo. Por último me quedé con TailwindCSS por sobre StyledComponents, simplemente porque quería probar algo distinto. ${VALENTINO_GUERRA}/#Repositorio-de-GitHub`,
+        description: `Un sitio web diseñado y desarrollado exclusivamente para mi, a modo de página personal o portafolio para mostrar mis proyectos y demás información.$$El objetivo era lograr que sea simple y agradable a cualquiera, pero también moderno y sin dejarme ningún detalle. Estoy muy satisfecho con el resultado. ${VALENTINO_GUERRA}#Repositorio-de-GitHub.`,
       },
       7: {
         title: "Splitnow",
-        description: `Es un pequeño proyecto que hice para resolver un problema que suelo tener con mis amigos. Sirve para calcular como repartir el dinero equitativamente entre un grupo de persona en base a cuánto gastó cada uno. $$ Diseñado en Figma, desarrollado con React (create-react-app), Typescript y TailwindCSS. Puedes visitarlo entrando a ${SPLITNOW}/#splitnow.app, también puedes ver el ${SPLITNOW_GITHUB}/#repositorio-de-GitHub`,
+        description: `Una pequeña herramienta en forma de aplicación web que hice para resolver un problema que suelo tener con mis amigos. Sirve para calcular como repartir el dinero equitativamente entre un grupo de persona en base a cuánto gastó cada uno.$$Puedes visitarlo entrando a ${SPLITNOW}#splitnow.app, también puedes ver el ${SPLITNOW_GITHUB}#repositorio-de-GitHub`,
       },
     },
   },

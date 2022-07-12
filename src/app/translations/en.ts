@@ -1,6 +1,15 @@
 import { Project } from "./../../types/index";
 import { BackToTop } from "./../../components/BackToTop";
-import { SOCIOS_AOM, WEB_AOM, PHOTOGRAPHY_SELLER, VALENTINO_GUERRA, SPLITNOW_GITHUB, SPLITNOW } from "../consts";
+import {
+  SOCIOS_AOM,
+  WEB_AOM,
+  PHOTOGRAPHY_SELLER,
+  VALENTINO_GUERRA,
+  SPLITNOW_GITHUB,
+  SPLITNOW,
+  ENIGMATH,
+  GITHUB_PARTNER,
+} from "../consts";
 
 /*
   Markdown
@@ -73,35 +82,35 @@ export const en = {
     projects: {
       0: {
         title: "Mobile games",
-        description: `En mis inicios con la programación, allá por el 2017, mientras aún iba a la escuela secundaria, tenía una fascinación por las aplicaciones móviles. Mi objetivo era volverme millonario haciendo un aplicación o un juego exitoso, pero era innegable que también disfrutaba mucho del proceso de crear algo nuevo. Poner en existencia y al alcance de todos, algo que previamente solo existía en mi cerebro, era la mejor parte. Durante un par de años, me dedique principalmente a desarrollar aplicaciones, muchas de ellas juegos. Considero que crear juegos es la manera más divertida de aprender a programar. Ya que involucra diseño, planeación, resolución de problemas y trabajo en equipo. Habilidades fundamentales para desarrollar cualquier cosa.`,
+        description: `A series of small, mostly physics-based, single-player games for Android. Made from simple but original ideas, ideal for having fun for a while.$$In my early days with programming, back in 2017-2018, while still going to high school, I had a fascination with mobile apps. My goal was to become a millionaire by making a successful app or game, but it was undeniable that I also enjoyed the process of creating something new.$$For a while, I used my free time to create mobile apps, mostly games. I consider creating games to be the most fun way to learn programming, as it involves design, planning, problem solving and teamwork. Fundamental skills to develop anything.`,
       },
       1: {
-        title: "Enigmath: ¿Puedes resolverlos todos?",
-        description: `Mi etapa de creación de juegos concluye con Enigmath. Un juego que desarrollé junto con mi compañero Iñaki Miranda, con quien desarrollé muchos de los siguientes proyectos. Después de muchos intentos fallidos de intentar hacer juegos demasiado ambiciosos, nos dimos cuenta que había que empezar por algo más simple, pero tomándonos el tiempo necesario para cada una de las 3 etapas del proceso. Planeación completa, diseño de las interfaces, y programación. Un juego de acertijos matemáticos en el cual debes descubrir el patrón para pasar al siguiente nivel. Puedes descargarlo desde Google Play`,
+        title: "Enigmath: Can you solve them all?",
+        description: `A fun game for Android in which you must solve mathematical puzzles and manage to recognize the patterns to move to the next level.$$Developed together with my partner Iñaki Miranda, with whom I developed many of the following projects.$$After many failed attempts of trying to make too ambitious games, we realized that it was better to start with something simple, but taking the necessary time to do it perfectly.$$The game is currently ${ENIGMATH}#available-on-Google-Play.`,
       },
       2: {
         title: "Socios AOM",
-        description: `Mi último proyecto en forma de app móvil. Es una herramienta para la Asociación de Odontólogos de Mar del Plata y todos sus clientes. $$ El resultado final es de una excelente calidad, ya que nos enfocamos en hacer algo simple pero al mismo tiempo estar presentes en todos los detalles y no dejar nada sin revisar. ${SOCIOS_AOM}/#Se-encuentra-en-Google-Play y en App Store de forma privada.`,
+        description: `A mobile application designed as a multi-functional tool for all dentists associated to AOM (Asociación Odontológica Marplatense).$$The final result is of excellent quality, as we focused on keeping it simple but at the same time being present in every detail and leaving nothing unchecked. ${SOCIOS_AOM}#Available-on-Google-Play and App Store privately.`,
       },
       3: {
         title: "Web AOM",
-        description: `Uno de las primeros sitios web que desarrollamos, también para la Asociación de Odontólogos de Mar del Plata. ${WEB_AOM}/#aom.org.ar`,
+        description: `A website for the dental association of Mar del Plata, with a public part that you can visit, and a part for members only.$$It was a big challenge, since it was a work that involved frontend and backend, integrated with a pre-existing database. Visit ${WEB_AOM}#aom.org.ar.`,
       },
       4: {
-        title: "Venta de fotografías",
-        description: `Sitio web de tipo e-commerce pero muy simplificado. Esta orientado a la venta de fotografías, pero podría usarse para vender cualquier otro tipo de productos. $$ Hecho con React y Next.js, me sirvió para entender a fondo el uso del server-side rendering que ofrece Next.js. El sitio web no está en funcionamiento actualmente pero puedes visitar el ${PHOTOGRAPHY_SELLER}/#repositorio-de-GitHub ya que es público.`,
+        title: "Photography Store",
+        description: `A website designed to connect a seller of framed photographs with his customers, showing all available products and their prices.$$The backend of this site was made using Strapi, a well-known "headless CMS" that offers a quick and easy way to create an API. ${PHOTOGRAPHY_SELLER}#GitHub-repository.`,
       },
       5: {
-        title: "Centro de estudiantes",
-        description: `Sitio web para el centro de estudiantes de una universidad local. Fue un trabajo pequeño, pero todo suma a la experiencia. $$ Hecho con React (create-react-app). Si bien no aprendimos nada nuevo al desarrollar este sitio, nos sirvió para solidificar nuestro entendimiento de React y dar estilo con StyledComponents.`,
+        title: "Student Center",
+        description: `A website for the student center of a local university, it stands out for its minimalism and its function to search for educational material files through a search engine and a folder browser.$$Although it was a small project, in this case the challenge was to integrate the Azure API of OneDrive to be able to obtain the necessary files dynamically.`,
       },
       6: {
         title: "Valentino Guerra",
-        description: `Lo primero fue diseñar la interfaz, para lo cual usé Figma. Me encanta diseñar interfaces, pero es una tarea agotadora aunque no lo parezca. $$ Posteriormente, era el momento de elegir con que tecnologías programarla. Me decidí por no utilizar Next.js, pero tampoco create-react-app ya que quería tener la experiencia de configurar React yo mismo, utilizando Webpack. También elegí Typescript, hacía mucho que no lo utilizaba en proyectos y tenía ganas de retomarlo. Por último me quedé con TailwindCSS por sobre StyledComponents, simplemente porque quería probar algo distinto. ${VALENTINO_GUERRA}/#Repositorio-de-GitHub`,
+        description: `A website designed and developed exclusively for me, as a personal page or portfolio to show my projects and other information.$$The goal was to make it simple and pleasant to anyone, but also modern and without leaving any detail. I am very satisfied with the result. ${VALENTINO_GUERRA}#GitHub-repository.`,
       },
       7: {
         title: "Splitnow",
-        description: `Es un pequeño proyecto que hice para resolver un problema que suelo tener con mis amigos. Sirve para calcular como repartir el dinero equitativamente entre un grupo de persona en base a cuánto gastó cada uno. $$ Diseñado en Figma, desarrollado con React (create-react-app), Typescript y TailwindCSS. Puedes visitarlo entrando a ${SPLITNOW}/#splitnow.app, también puedes ver el ${SPLITNOW_GITHUB}/#repositorio-de-GitHub`,
+        description: `A little tool in the form of a web application I made to solve a problem I often have with my friends. It calculates how to split the money evenly among a group of people based on how much each person spent.$$You can visit it by going to ${SPLITNOW}#splitnow.app, you can also check out the ${SPLITNOW_GITHUB}#GitHub-repository.`,
       },
     },
   },
