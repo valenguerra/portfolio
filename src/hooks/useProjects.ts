@@ -50,7 +50,7 @@ import mongodb from "../assets/images/mongodb.png";
 
 export const useProjects = (): Project[] => {
   const language = useContext(LanguageContext);
-  const { section4 } = language?.texts;
+  const { projects: texts } = language?.texts;
 
   let projects = [
     {
@@ -111,7 +111,7 @@ export const useProjects = (): Project[] => {
   ];
 
   return projects.map((project) => {
-    const { title, description } = section4.projects[project.id];
+    const { title, description } = texts.projects[project.id];
     return { ...project, title, description: description.replace(/\$\$/g, "  \n&nbsp;  \n  ") };
   });
 };

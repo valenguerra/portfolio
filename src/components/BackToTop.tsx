@@ -1,10 +1,13 @@
 import clsx from "clsx";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { LanguageContext } from "../App";
 import { Button } from "./Button";
 import { Icon } from "./Icon";
 
 export const BackToTop = () => {
   const [showing, setShowing] = useState<boolean>(false);
+  const language = useContext(LanguageContext);
+  const { backToTop: text } = language?.texts;
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -29,7 +32,7 @@ export const BackToTop = () => {
         onClick={scrollToTop}
       >
         <Icon name="longArrowUp" />
-        Back to top
+        {text}
       </Button>
     </div>
   );

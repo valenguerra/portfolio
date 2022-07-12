@@ -1,10 +1,10 @@
-import { Card } from "../../components/Card";
-import { Divider } from "../../components/Divider";
-import { TitleIcon } from "../../components/TitleIcon";
-import { ColoredIcon } from "../../components/Icon";
+import { Card } from "../Card";
+import { Divider } from "../Divider";
+import { TitleIcon } from "../TitleIcon";
+import { ColoredIcon } from "../Icon";
 import React, { RefObject, useContext } from "react";
 import { LanguageContext } from "../../App";
-import { Frame } from "../../components/Frame";
+import { Frame } from "../Frame";
 
 import chessHorse from "../../assets/images/chess_horse.png";
 import html from "../../assets/images/html.png";
@@ -27,7 +27,7 @@ import graphql from "../../assets/images/graphql.png";
 
 export const Skills = React.forwardRef<HTMLElement, {}>(({}, ref): JSX.Element => {
   const language = useContext(LanguageContext);
-  const { section3 } = language?.texts;
+  const { skills: texts } = language?.texts;
 
   const Item = ({ name, src }: { name: string; src: string }) => (
     <div className="flex gap-2 text-white">
@@ -42,8 +42,8 @@ export const Skills = React.forwardRef<HTMLElement, {}>(({}, ref): JSX.Element =
 
   return (
     <Card ref={ref}>
-      <TitleIcon iconSrc={chessHorse} title={section3.title} />
-      <SubtitleLight>{section3.subtitle1}</SubtitleLight>
+      <TitleIcon iconSrc={chessHorse} title={texts.title} />
+      <SubtitleLight>{texts.subtitle1}</SubtitleLight>
       <ItemGroup>
         <Item name="HTML" src={html} />
         <Item name="CSS" src={css} />
@@ -59,14 +59,14 @@ export const Skills = React.forwardRef<HTMLElement, {}>(({}, ref): JSX.Element =
         <Item name="Typescript" src={typescript} />
       </ItemGroup>
       <Divider />
-      <SubtitleLight>{section3.subtitle2}</SubtitleLight>
+      <SubtitleLight>{texts.subtitle2}</SubtitleLight>
       <ItemGroup>
         <Item name="Sass" src={sass} />
         <Item name="MongoDB" src={mongodb} />
         <Item name="Flutter" src={flutter} />
       </ItemGroup>
       <Divider />
-      <SubtitleLight>{section3.subtitle3}</SubtitleLight>
+      <SubtitleLight>{texts.subtitle3}</SubtitleLight>
       <ItemGroup>
         <Item name="Vue" src={vue} />
         <Item name="GraphQL" src={graphql} />

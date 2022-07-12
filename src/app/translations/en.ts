@@ -1,3 +1,5 @@
+import { Project } from "./../../types/index";
+import { BackToTop } from "./../../components/BackToTop";
 import { SOCIOS_AOM, WEB_AOM, PHOTOGRAPHY_SELLER, VALENTINO_GUERRA, SPLITNOW_GITHUB, SPLITNOW } from "../consts";
 
 /*
@@ -8,7 +10,7 @@ import { SOCIOS_AOM, WEB_AOM, PHOTOGRAPHY_SELLER, VALENTINO_GUERRA, SPLITNOW_GIT
 */
 
 export const en = {
-  section1: {
+  hero: {
     btn: "Cambiar a español",
     superTitle: "Valentino Guerra",
     superSubtitle: "Web Developer / Frontend / React",
@@ -28,7 +30,7 @@ export const en = {
     btn3: "Projects",
     btn4: "Contact me!",
   },
-  section2: {
+  aboutMe: {
     title: "About me",
     ph1: "I am 21 years old.",
     ph2: "I like to explore, travel, meet new people and places in nature.",
@@ -60,13 +62,13 @@ export const en = {
       ph2: ["Someone might find it useful, so here it is:", "A place where I write things... (mostly spanish)"],
     },
   },
-  section3: {
+  skills: {
     title: "Skills",
     subtitle1: "I am confident with",
     subtitle2: "I have used in past projects",
     subtitle3: "I want to learn/deepen in the near future.",
   },
-  section4: {
+  projects: {
     title: "Projects",
     projects: {
       0: {
@@ -81,7 +83,6 @@ export const en = {
         title: "Socios AOM",
         description: `Mi último proyecto en forma de app móvil. Es una herramienta para la Asociación de Odontólogos de Mar del Plata y todos sus clientes. $$ El resultado final es de una excelente calidad, ya que nos enfocamos en hacer algo simple pero al mismo tiempo estar presentes en todos los detalles y no dejar nada sin revisar. ${SOCIOS_AOM}/#Se-encuentra-en-Google-Play y en App Store de forma privada.`,
       },
-
       3: {
         title: "Web AOM",
         description: `Uno de las primeros sitios web que desarrollamos, también para la Asociación de Odontólogos de Mar del Plata. ${WEB_AOM}/#aom.org.ar`,
@@ -104,7 +105,7 @@ export const en = {
       },
     },
   },
-  section5: {
+  contactMe: {
     title: "Contact Me!",
     placeholder1: "Name",
     placeholder2: "Email",
@@ -116,4 +117,5 @@ export const en = {
     },
   },
   footer: "by Valentino Guerra, 2022",
+  backToTop: "Back to top",
 };

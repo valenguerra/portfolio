@@ -1,7 +1,7 @@
-import { Card } from "../../../components/Card";
-import { TitleIcon } from "../../../components/TitleIcon";
+import { Card } from "../../Card";
+import { TitleIcon } from "../../TitleIcon";
 import React, { useContext, useState } from "react";
-import { Divider } from "../../../components/Divider";
+import { Divider } from "../../Divider";
 
 import briefcase from "../../../assets/images/briefcase.png";
 import { LanguageContext } from "../../../App";
@@ -14,14 +14,14 @@ export const Projects = React.forwardRef<HTMLElement, {}>(({}, ref): JSX.Element
   const projects = useProjects();
   const language = useContext(LanguageContext);
 
-  const { section4 } = language?.texts;
+  const { projects: texts } = language?.texts;
 
   const closeProject = () => setSelected(null);
 
   return (
     <Card ref={ref} className="relative">
       <div className="flex items-center justify-between">
-        <TitleIcon title={section4.title} iconSrc={briefcase} />
+        <TitleIcon title={texts.title} iconSrc={briefcase} />
       </div>
       <Divider />
       {selected === null ? (

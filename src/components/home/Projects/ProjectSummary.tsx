@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { useState } from "react";
-import { Frame } from "../../../components/Frame";
-import { Paragraph, Subtitle } from "../../../components/Text";
+import { Frame } from "../../Frame";
+import { Paragraph, Subtitle } from "../../Text";
 import { Project } from "../../../types";
 
 interface Props {

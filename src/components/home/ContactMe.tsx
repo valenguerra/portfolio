@@ -1,16 +1,16 @@
 import axios from "axios";
-import { Card } from "../../components/Card";
-import { TitleIcon } from "../../components/TitleIcon";
+import { Card } from "../Card";
+import { TitleIcon } from "../TitleIcon";
 import credentials from "../../assets/images/credentials.png";
-import { TextField } from "../../components/TextField";
+import { TextField } from "../TextField";
 import React, { RefObject, useContext, useRef, useState } from "react";
-import { Button } from "../../components/Button";
-import { ColoredIcon, Icon } from "../../components/Icon";
+import { Button } from "../Button";
+import { ColoredIcon, Icon } from "../Icon";
 import { LanguageContext } from "../../App";
-import { Paragraph, Subtitle } from "../../components/Text";
+import { Paragraph, Subtitle } from "../Text";
 
 import smile from "../../assets/images/smile.png";
-import { Loader } from "../../components/loader";
+import { Loader } from "../loader";
 import { FormStatus } from "../../types";
 import { EMAIL_REGEX } from "../../app/consts";
 
@@ -28,7 +28,7 @@ export const ContactMe = React.forwardRef<HTMLElement, {}>(({}, ref): JSX.Elemen
   const [fields, setFields] = useState<ContactFields>(empty);
   const [status, setStatus] = useState<FormStatus>("normal");
 
-  const { section5 } = language?.texts;
+  const { contactMe: texts } = language?.texts;
   const allFieldsAreValid = fields.email.match(EMAIL_REGEX) && fields.fullName.length > 2 && fields.message.length > 8;
 
   const onFieldChange = (v: string, n: string) => setFields({ ...fields, [n]: v });
@@ -43,7 +43,7 @@ export const ContactMe = React.forwardRef<HTMLElement, {}>(({}, ref): JSX.Elemen
 
   return (
     <Card ref={ref}>
-      <TitleIcon iconSrc={credentials} title={section5.title} />
+      <TitleIcon iconSrc={credentials} title={texts.title} />
       {status !== "normal" && (
         <div className="flex h-96 flex-col items-center justify-center gap-4">
           {status === "sending" && <Loader />}
@@ -51,9 +51,9 @@ export const ContactMe = React.forwardRef<HTMLElement, {}>(({}, ref): JSX.Elemen
             <>
               <div className="flex items-center gap-4">
                 <ColoredIcon src={smile} alt="happy face" size="big" />
-                <Subtitle>{section5.sent.subtitle}</Subtitle>
+                <Subtitle>{texts.sent.subtitle}</Subtitle>
               </div>
-              <Paragraph>{section5.sent.ph1}</Paragraph>
+              <Paragraph>{texts.sent.ph1}</Paragraph>
             </>
           )}
         </div>
@@ -71,7 +71,7 @@ export const ContactMe = React.forwardRef<HTMLElement, {}>(({}, ref): JSX.Elemen
             <TextField
               name="fullName"
               value={fields.fullName}
-              placeholder={section5.placeholder1}
+              placeholder={texts.placeholder1}
               onChange={onFieldChange}
               className="flex-1"
             />
@@ -79,7 +79,7 @@ export const ContactMe = React.forwardRef<HTMLElement, {}>(({}, ref): JSX.Elemen
               name="email"
               type="email"
               value={fields.email}
-              placeholder={section5.placeholder2}
+              placeholder={texts.placeholder2}
               onChange={onFieldChange}
               className="flex-1"
             />
@@ -87,13 +87,13 @@ export const ContactMe = React.forwardRef<HTMLElement, {}>(({}, ref): JSX.Elemen
           <TextField
             name="message"
             value={fields.message}
-            placeholder={section5.placeholder3}
+            placeholder={texts.placeholder3}
             onChange={onFieldChange}
             textarea
             className="h-48 resize-none"
           />
           <Button className="sm:self-end" primary onClick={sendMessage} disabled={!allFieldsAreValid}>
-            {section5.btn} <Icon name="arrowRight" color="black" />
+            {texts.btn} <Icon name="arrowRight" color="black" />
           </Button>
         </form>
       )}

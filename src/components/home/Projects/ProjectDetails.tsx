@@ -1,8 +1,8 @@
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { Icon } from "../../../components/Icon";
-import { Link } from "../../../components/Link";
-import { Subtitle } from "../../../components/Text";
+import { Icon } from "../../Icon";
+import { Link } from "../../Link";
+import { Subtitle } from "../../Text";
 import { Project } from "../../../types";
 import { ImageRow } from "./ImageRow";
 
@@ -13,6 +13,7 @@ interface Props {
 
 export const ProjectDetails = ({ project, onClose }: Props) => {
   const { title, description, images } = project;
+
   return (
     <div className="flex flex-col gap-4">
       <div className="flex items-center gap-6">

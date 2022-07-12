@@ -1,7 +1,7 @@
 import { SOCIOS_AOM, WEB_AOM, PHOTOGRAPHY_SELLER, VALENTINO_GUERRA, SPLITNOW_GITHUB, SPLITNOW } from "../consts";
 
 export const es = {
-  section1: {
+  hero: {
     btn: "Change to english",
     superTitle: "Valentino Guerra",
     superSubtitle: "Desarrollador Web de Frontend",
@@ -21,7 +21,7 @@ export const es = {
     btn3: "Proyectos",
     btn4: "¡Contáctame!",
   },
-  section2: {
+  aboutMe: {
     title: "Sobre mí",
     ph1: "Tengo 21 años.",
     ph2: "Me gusta explorar, ir de viaje, conocer gente y lugares nuevos en la naturaleza.",
@@ -53,14 +53,14 @@ export const es = {
       ph2: ["A alguien podría servirle asi que acá lo dejo:", "Un lugar donde escribo cosas..."],
     },
   },
-  section3: {
+  skills: {
     title: "Habilidades",
     subtitle1: "Manejo con confianza",
     subtitle2: "He utilizado en proyectos pasados",
     subtitle3: "Quiero aprender/profundizar en un futuro próximo",
   },
-  section4: {
-    title: "Proyectos",
+  projects: {
+    title: "Projects",
     projects: {
       0: {
         title: "Mobile games",
@@ -72,49 +72,31 @@ export const es = {
       },
       2: {
         title: "Socios AOM",
-        description: `Mi último proyecto en forma de app móvil. Es una herramienta para la Asociación de Odontólogos de Mar del Plata y todos sus clientes.
-        
-        El resultado final es de una excelente calidad, ya que nos enfocamos en hacer algo simple pero al mismo tiempo estar presentes en todos los detalles y no dejar nada sin revisar. (Se encuentra en Google Play)[${SOCIOS_AOM}] y en App Store de forma privada.`,
+        description: `Mi último proyecto en forma de app móvil. Es una herramienta para la Asociación de Odontólogos de Mar del Plata y todos sus clientes. $$ El resultado final es de una excelente calidad, ya que nos enfocamos en hacer algo simple pero al mismo tiempo estar presentes en todos los detalles y no dejar nada sin revisar. ${SOCIOS_AOM}/#Se-encuentra-en-Google-Play y en App Store de forma privada.`,
       },
       3: {
         title: "Web AOM",
-        description: `Una de las primeros sitios web que desarrollamos, también para la Asociación de Odontólogos de Mar del Plata. (aom.org.ar)[${WEB_AOM}]`,
+        description: `Uno de las primeros sitios web que desarrollamos, también para la Asociación de Odontólogos de Mar del Plata. ${WEB_AOM}/#aom.org.ar`,
       },
       4: {
-        title: "Centro de estudiantes",
-        description: `Sitio web para el centro de estudiantes de una universidad local. Fue un trabajo pequeño, pero todo suma a la experiencia.
-        
-        Hecho con React (create-react-app). Si bien no aprendimos nada nuevo al desarrollar este sitio, nos sirvió para solidificar nuestro entendimiento de React y dar estilo con StyledComponents.`,
+        title: "Venta de fotografías",
+        description: `Sitio web de tipo e-commerce pero muy simplificado. Esta orientado a la venta de fotografías, pero podría usarse para vender cualquier otro tipo de productos. $$ Hecho con React y Next.js, me sirvió para entender a fondo el uso del server-side rendering que ofrece Next.js. El sitio web no está en funcionamiento actualmente pero puedes visitar el ${PHOTOGRAPHY_SELLER}/#repositorio-de-GitHub ya que es público.`,
       },
       5: {
-        title: "Web AOM",
-        description: `Una de las primeros sitios web que desarrollamos, también para la Asociación de Odontólogos de Mar del Plata. (aom.org.ar)[${WEB_AOM}]`,
+        title: "Centro de estudiantes",
+        description: `Sitio web para el centro de estudiantes de una universidad local. Fue un trabajo pequeño, pero todo suma a la experiencia. $$ Hecho con React (create-react-app). Si bien no aprendimos nada nuevo al desarrollar este sitio, nos sirvió para solidificar nuestro entendimiento de React y dar estilo con StyledComponents.`,
       },
       6: {
-        title: "Venta de fotografías",
-        description: `Sitio web de tipo e-commerce pero muy simplificado. Esta orientado a la venta de fotografías, pero podría usarse para vender cualquier otro tipo de productos.
-        
-        Hecho con React y Next.js, me sirvió para entender a fondo el uso del server-side rendering que ofrece Next.js. El sitio web no está en funcionamiento actualmente pero puedes visitar el (repositorio de GitHub)[${PHOTOGRAPHY_SELLER}] ya que es público.`,
+        title: "Valentino Guerra",
+        description: `Lo primero fue diseñar la interfaz, para lo cual usé Figma. Me encanta diseñar interfaces, pero es una tarea agotadora aunque no lo parezca. $$ Posteriormente, era el momento de elegir con que tecnologías programarla. Me decidí por no utilizar Next.js, pero tampoco create-react-app ya que quería tener la experiencia de configurar React yo mismo, utilizando Webpack. También elegí Typescript, hacía mucho que no lo utilizaba en proyectos y tenía ganas de retomarlo. Por último me quedé con TailwindCSS por sobre StyledComponents, simplemente porque quería probar algo distinto. ${VALENTINO_GUERRA}/#Repositorio-de-GitHub`,
       },
       7: {
-        title: "Valentino Guerra",
-        description: `(Repositorio de GitHub)[${VALENTINO_GUERRA}]
-        
-        Lo primero fue diseñar la interfaz, para lo cual usé Figma. Me encanta diseñar interfaces, pero es una tarea agotadora aunque no lo parezca.
-        
-        Posteriormente, era el momento de elegir con que tecnologías programarla. Me decidí por no utilizar Next.js, pero tampoco create-react-app ya que quería tener la experiencia de configurar React yo mismo, utilizando Webpack. También elegí Typescript, hacía mucho que no lo utilizaba en proyectos y tenía ganas de retomarlo. Por último me quedé con TailwindCSS por sobre StyledComponents, simplemente porque quería probar algo distinto.`,
-      },
-      8: {
         title: "Splitnow",
-        description: `(Repositorio de GitHub)[${SPLITNOW_GITHUB}]
-        
-        Es un pequeño proyecto que hice para resolver un problema que suelo tener con mis amigos. Sirve para calcular como repartir el dinero equitativamente entre un grupo de persona en base a cuánto gastó cada uno.
-        
-        Diseñado en Figma, desarrollado con React (create-react-app), Typescript y TailwindCSS. Puedes visitarlo entrando a (splitnow.app)[${SPLITNOW}]`,
+        description: `Es un pequeño proyecto que hice para resolver un problema que suelo tener con mis amigos. Sirve para calcular como repartir el dinero equitativamente entre un grupo de persona en base a cuánto gastó cada uno. $$ Diseñado en Figma, desarrollado con React (create-react-app), Typescript y TailwindCSS. Puedes visitarlo entrando a ${SPLITNOW}/#splitnow.app, también puedes ver el ${SPLITNOW_GITHUB}/#repositorio-de-GitHub`,
       },
     },
   },
-  section5: {
+  contactMe: {
     title: "¡Contáctame!",
     placeholder1: "Nombre",
     placeholder2: "Correo electrónico",
@@ -126,4 +108,5 @@ export const es = {
     },
   },
   footer: "hecho por Valentino Guerra, 2022",
+  backToTop: "Subir",
 };

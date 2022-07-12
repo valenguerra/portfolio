@@ -1,7 +1,7 @@
 import { useContext, useEffect, useRef } from "react";
 import { LanguageContext } from "../../App";
-import { BackToTop } from "../../components/BackToTop";
-import { Footer } from "../../components/Footer";
+import { BackToTop } from "../BackToTop";
+import { Footer } from "../Footer";
 import { AboutMe } from "./AboutMe";
 import { Background } from "./Background";
 import { ContactMe } from "./ContactMe";
@@ -11,7 +11,7 @@ import { Skills } from "./Skills";
 
 export const Home = (): JSX.Element => {
   const language = useContext(LanguageContext);
-  const { section1 } = language?.texts;
+  const { hero: texts } = language?.texts;
   const aboutMeRef = useRef<HTMLElement>(null);
   const skillsRef = useRef<HTMLElement>(null);
   const projectsRef = useRef<HTMLElement>(null);
@@ -27,7 +27,7 @@ export const Home = (): JSX.Element => {
               className="py-1/2 inline-flex cursor-pointer select-none rounded border border-light-48/160 bg-white bg-opacity-0 px-2 text-sm font-light text-white transition hover:bg-opacity-10"
               onClick={language?.toggle}
             >
-              {section1.btn}
+              {texts.btn}
             </span>
             <Hero {...{ aboutMeRef, skillsRef, projectsRef, contactMeRef }} />
           </div>
