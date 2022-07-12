@@ -4,7 +4,7 @@ export const es = {
   hero: {
     btn: "Change to english",
     superTitle: "Valentino Guerra",
-    superSubtitle: "Web Developer / Frontend / React",
+    superSubtitle: "Desarrollador Web / Frontend / React",
     cardTitle: "Hola!",
     ph1: [
       "Soy un desarrollador de sofware de",
