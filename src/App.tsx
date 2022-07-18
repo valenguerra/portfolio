@@ -2,11 +2,6 @@ import { createContext } from "react";
 import { useLanguage } from "./hooks/useLanguage";
 import { Home } from "./components/home";
 import { Language } from "./types";
-import ReactGA from "react-ga";
-import { GA_TRACK_ID } from "./app/consts";
-
-// Initialize Google Analytics
-ReactGA.initialize(GA_TRACK_ID);
 
 export const LanguageContext = createContext<Language | null>(null);
 
