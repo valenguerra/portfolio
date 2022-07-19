@@ -41,9 +41,9 @@ export const Hero = ({ aboutMeRef, contactMeRef, projectsRef, skillsRef }: Props
             <a href={LINKEDIN} target="_blank">
               <Icon name="linkedIn" />
             </a>
-            <a href={INSTAGRAM} target="_blank">
+            {/* <a href={INSTAGRAM} target="_blank">
               <Icon name="instagram" />
-            </a>
+            </a> */}
           </div>
         </div>
         <Paragraph>
