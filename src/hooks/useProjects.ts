@@ -10,7 +10,8 @@ import photographyThumbnail from "../assets/images/thumbnails/photography.png";
 import sociosAomThumnail from "../assets/images/thumbnails/socios_aom.png";
 import splitnowThumbnail from "../assets/images/thumbnails/splitnow.png";
 import studentsThumbnail from "../assets/images/thumbnails/students.png";
-import valenguerra from "../assets/images/thumbnails/valenguerra.png";
+import valenguerraThumbnail from "../assets/images/thumbnails/valenguerra.png";
+import comsaThumbnail from "../assets/images/thumbnails/comsa.png";
 
 // Screenshots
 import ball from "../assets/images/screenshots/ball.jpg";
@@ -30,6 +31,7 @@ import students1 from "../assets/images/screenshots/students_1.png";
 import students2 from "../assets/images/screenshots/students_2.png";
 import webAom1 from "../assets/images/screenshots/web_aom_1.jpeg";
 import webAom2 from "../assets/images/screenshots/web_aom_2.jpeg";
+import comsa from "../assets/images/screenshots/comsa.png";
 
 // Tech stack
 import html from "../assets/images/html.png";
@@ -99,7 +101,7 @@ export const useProjects = (): Project[] => {
     },
     {
       id: 6,
-      thumbnail: valenguerra,
+      thumbnail: valenguerraThumbnail,
       year: 2022,
       techStack: [react, webpack, typescript, tailwind, figma],
     },
@@ -109,6 +111,13 @@ export const useProjects = (): Project[] => {
       images: [splitnow],
       year: 2022,
       techStack: [react, typescript, tailwind, figma],
+    },
+    {
+      id: 8,
+      thumbnail: comsaThumbnail,
+      images: [comsa],
+      year: 2022,
+      techStack: [react, nextjs, typescript, tailwind, figma],
     },
   ];
 

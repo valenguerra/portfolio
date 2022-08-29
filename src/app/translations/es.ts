@@ -1,4 +1,4 @@
-import { SOCIOS_AOM, WEB_AOM, PHOTOGRAPHY_SELLER, VALENTINO_GUERRA, SPLITNOW_GITHUB, SPLITNOW, ENIGMATH } from "../consts";
+import { SOCIOS_AOM, WEB_AOM, PHOTOGRAPHY_SELLER, VALENTINO_GUERRA, SPLITNOW_GITHUB, SPLITNOW, ENIGMATH, COMSA } from "../consts";
 
 export const es = {
   hero: {
@@ -93,6 +93,10 @@ export const es = {
       7: {
         title: "Splitnow",
         description: `Una pequeña herramienta en forma de aplicación web que hice para resolver un problema que suelo tener con mis amigos. Sirve para calcular como repartir el dinero equitativamente entre un grupo de persona en base a cuánto gastó cada uno.$$Puedes visitarlo entrando a ${SPLITNOW}#splitnow.app, también puedes ver el ${SPLITNOW_GITHUB}#repositorio-de-GitHub`,
+      },
+      8: {
+        title: "Comsa",
+        description: `Un sitio web de presentación para una empresa de control de plagas de mi ciudad. Un proyecto simple y sin grandes complicaciones, que me sirvió para practicar mis habilidades y mejorar en el uso de tecnologías como NextJS y Typescript.$$Cuenta con un formulario de contacto, un mapa integrado de Google Maps y buen uso de SEO. ${COMSA}#Visitar-página-web`,
       },
     },
   },

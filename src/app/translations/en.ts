@@ -9,6 +9,7 @@ import {
   SPLITNOW,
   ENIGMATH,
   GITHUB_PARTNER,
+  COMSA,
 } from "../consts";
 
 /*
@@ -111,6 +112,10 @@ export const en = {
       7: {
         title: "Splitnow",
         description: `A little tool in the form of a web application I made to solve a problem I often have with my friends. It calculates how to split the money evenly among a group of people based on how much each person spent.$$You can visit it by going to ${SPLITNOW}#splitnow.app, you can also check out the ${SPLITNOW_GITHUB}#GitHub-repository.`,
+      },
+      8: {
+        title: "Comsa",
+        description: `A presentation website for a pest control company from my city. A simple and straight forward project, which helped me to practice my skills and improve my use of technologies such as NextJS and Typescript.$$It includes a contact form, an integrated GoogleMaps map and a correct use of SEO. ${COMSA}#Visit-website`,
       },
     },
   },
